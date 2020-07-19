@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
+import Footer from 'containers/footer';
+import Navbar from 'containers/navbar';
 
 interface PropsLayout {
   title?: string
 }
 
-const Layout: React.FunctionComponent<PropsLayout> = ({ children, title }) => {
+const Layout: React.SFC<PropsLayout> = ({ children, title }) => {
   return (
     <div>
       <Head>
@@ -16,7 +18,9 @@ const Layout: React.FunctionComponent<PropsLayout> = ({ children, title }) => {
 
         <title>{title}</title>
       </Head>
+      <Navbar />
       { children }
+      <Footer />
     </div>
   )
 };
