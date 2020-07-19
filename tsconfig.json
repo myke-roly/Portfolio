@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "esnext",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
       "dom",
@@ -22,7 +22,7 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "target": "esnext",
   },
   "exclude": [
     "node_modules"
