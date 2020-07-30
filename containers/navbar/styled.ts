@@ -42,7 +42,6 @@ export const Links = styled.ul`
 export const ItemsStyles = styled.li`
   margin-left: 1rem;
   height: inherit;
-
   a {
     color: white;
     text-transform: uppercase;
@@ -63,6 +62,12 @@ export const ItemsStyles = styled.li`
       left: 0;
       background: red;
       animation: ${link} 500ms ease;
+    }
+
+    svg {
+      color: white;
+      width: 1.2em;
+      height: auto;
     }
   }
 `;

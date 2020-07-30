@@ -2,6 +2,7 @@
   "presets": ["next/babel"],
   "plugins": [
     ["styled-components", { "ssr": true }], 
-    ["styled-jsx/babel", { "optimizeForSpeed": true }]
+    ["styled-jsx/babel", { "optimizeForSpeed": true }],
+    ["inline-react-svg"]
   ]
 }

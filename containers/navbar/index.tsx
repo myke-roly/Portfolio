@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavbarStyled, Logo, Links, ItemsStyles } from './styled';
 import Link from 'next/link';
+import GithubSVG from './github.svg';
 
 type itemsArray = {
   id: number;
@@ -36,6 +37,11 @@ const Navbar: React.SFC = () => {
         </Link>
         <Links className="items">
           <Items />
+          <ItemsStyles>
+            <a href="https://www.github.com/myke-roly" target="_blank" rel="noreferrer noopener nofollow">
+              <GithubSVG />
+            </a>
+          </ItemsStyles>
         </Links>
       </div>
     </NavbarStyled>
