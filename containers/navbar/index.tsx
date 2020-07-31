@@ -1,32 +1,32 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { NavbarStyled, Logo, Links, ItemsStyles } from './styled';
 import Link from 'next/link';
 import GithubSVG from './github.svg';
 
-type itemsArray = {
+interface itemsArray {
   id: number;
   link: string;
   name: string;
 }
-const Items: React.SFC = () => {
+const listItems = (): any => {
   const items: itemsArray[] = [
     { id: 0, link: 'home', name: 'home' },
     { id: 1, link: 'about', name: 'about' },
     { id: 2, link: 'contact', name: 'contact' },
     { id: 3, link: 'porfolio', name: 'porfolio' },
   ];
-  return (
-    <>
-      {items.map((item) => (
-        <ItemsStyles>
-          <a href={`#${item.link}`}>{item.name}</a>
-        </ItemsStyles>
-      ))}
-    </>
-  );
+  return items.map((item) => (
+    <ItemsStyles key={item.id}>
+      <a href={`#${item.link}`}>{item.name}</a>
+    </ItemsStyles>
+  ));
+};
+
+type Props = {
+  changeTheme: () => any
 }
 
-const Navbar: React.SFC = () => {
+const Navbar: React.SFC<Props> = ({ changeTheme }) => {
   return (
     <NavbarStyled className="navbar">
       <div className="container">
@@ -36,12 +36,17 @@ const Navbar: React.SFC = () => {
           </Logo>
         </Link>
         <Links className="items">
-          <Items />
+          { listItems() /* Mostrar items */ }
           <ItemsStyles>
-            <a href="https://www.github.com/myke-roly" target="_blank" rel="noreferrer noopener nofollow">
+            <a
+              href="https://www.github.com/myke-roly"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+            >
               <GithubSVG />
             </a>
           </ItemsStyles>
+          <button onClick={changeTheme}>Dark mode</button>
         </Links>
       </div>
     </NavbarStyled>

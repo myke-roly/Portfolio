@@ -1,18 +1,19 @@
 import React from 'react';
 import Button from 'components/ui/button';
+import { HeaderStyled, HeaderContent, WaterStyled } from './styled';
 
 const Header: React.SFC = () => {
   return (
-    <header className="header" id="home">
+    <HeaderStyled>
       <div className="container">
-        <section className="header-content">
-          <h1 className="title-header">
+        <HeaderContent>
+          <h1>
             Mike_ <br />
             Front-End <br />
             Developer
           </h1>
-          <p className="description-header">Code is my life!</p>
-          <div className="social"></div>
+          <p>Code is my life!</p>
+          <div></div>
           <br />
           <Button
             hrefLink="#portfolio"
@@ -20,10 +21,10 @@ const Header: React.SFC = () => {
             color="orange"
             text="proyectos"
           />
-        </section>
-        <span className="text-water">DEVELOPER</span>{/** Marca de agua*/}
+        </HeaderContent>
+        <WaterStyled>DEVELOPER</WaterStyled>{/** Marca de agua*/}
       </div>
-    </header>
+    </HeaderStyled>
   )
 }
 

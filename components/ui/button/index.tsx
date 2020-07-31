@@ -28,7 +28,7 @@ const ButtonStyles = styled.a`
   text-transform: uppercase;
   transition: all 500ms ease;
   margin-right: .5rem;
-  background: ${props => props.theme.colors.dark};
+  background: ${props => props.theme.colors.lightBlue};
 `;
 
 const Button: React.SFC<Props> = ({ hrefLink, type, color, text }) => {

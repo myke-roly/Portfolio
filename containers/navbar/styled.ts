@@ -14,8 +14,8 @@ export const NavbarStyled = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
-  padding: .5rem 0;
-  background: black;
+  padding: .85rem 0;
+  background: ${({ theme }) => theme.colors.dark};
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
   z-index: 100;
 
