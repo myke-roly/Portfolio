@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { useState } from 'react';
+import ThemeContext from '../theme/ThemeContext';
 
 const darkTheme = {
   colors: {
@@ -52,9 +53,9 @@ const GlobalStyle = createGlobalStyle`
 export default ({ Component, pageProps }: AppProps) => {
   const [darkMode, setDarkMode] = useState(true);
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeContext>
       <GlobalStyle />
       <Component {...pageProps} changeTheme={() => setDarkMode(!darkMode)} />
-    </ThemeProvider>
+    </ThemeContext>
   );
 };
