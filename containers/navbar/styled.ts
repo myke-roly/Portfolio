@@ -43,14 +43,14 @@ export const ItemsStyles = styled.li`
   margin-left: 1rem;
   height: inherit;
   a {
-    color: white;
+    color: ${({ theme }) => theme.colors.primary};
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.65rem;
     padding: .5rem;
     position: relative;
     :hover {
-      color: gray;
+      color: ${({ theme }) => theme.colors.primary};
     }
     :hover::before {
       content: '';
@@ -60,12 +60,12 @@ export const ItemsStyles = styled.li`
       position: absolute;
       top: 0;
       left: 0;
-      background: red;
+      background: ${({ theme }) => theme.colors.gray};
       animation: ${link} 500ms ease;
     }
 
     svg {
-      color: white;
+      color: ${({ theme }) => theme.colors.primary};
       width: 1.2em;
       height: auto;
     }

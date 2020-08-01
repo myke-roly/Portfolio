@@ -18,12 +18,12 @@ export const HeaderStyled = styled.header`
     top: 5rem;
     width: 30rem;
     height: 100%;
-    opacity: 0.3;
     animation: render 1s ease;
     z-index: 2;
     background-image: url('./images/bg.svg');
     @media (max-width: 720px) {
       left: 0;
+      opacity: .5;
     }
   }
 `;
@@ -43,7 +43,7 @@ export const HeaderContent = styled.div`
 
   h1 {
     font-size: 3.9em;
-    color: white;
+    color: ${({ theme }) => theme.colors.primary};
     text-transform: uppercase;
     line-height: 1.5;
     letter-spacing: 1.5px;

@@ -3,28 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import { useState } from 'react';
 import ThemeContext from '../theme/ThemeContext';
 
-const darkTheme = {
-  colors: {
-    primary: '#ffffff',
-    dark: '#1c2329',
-    gray: '#eeeeee',
-    secondary: '#1e3044',
-    lightBlue: '#087baa',
-  },
-};
-
-const lightTheme = {
-  colors: {
-    dark: '#ffffff',
-    primary: '#1c2329',
-    gray: '#eeeeee',
-    secondary: '#1e3044',
-    lightBlue: '#087baa',
-  },
-};
-
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900&display=swap');
   *, *::after, *::before {
     margin: 0;
     padding: 0;

@@ -1,7 +1,8 @@
-import React, { PropsWithChildren } from 'react';
+import React, { useContext } from 'react';
 import { NavbarStyled, Logo, Links, ItemsStyles } from './styled';
 import Link from 'next/link';
 import GithubSVG from './github.svg';
+import { ContextTheme } from 'theme/ThemeContext';
 
 interface itemsArray {
   id: number;
@@ -23,10 +24,10 @@ const listItems = (): any => {
 };
 
 type Props = {
-  changeTheme: () => any
 }
 
-const Navbar: React.SFC<Props> = ({ changeTheme }) => {
+const Navbar: React.SFC<Props> = () => {
+  let { toggleTheme } = useContext(ContextTheme);
   return (
     <NavbarStyled className="navbar">
       <div className="container">
@@ -46,7 +47,7 @@ const Navbar: React.SFC<Props> = ({ changeTheme }) => {
               <GithubSVG />
             </a>
           </ItemsStyles>
-          <button onClick={changeTheme}>Dark mode</button>
+          <button onClick={() => toggleTheme()}>Dark mode</button>
         </Links>
       </div>
     </NavbarStyled>
