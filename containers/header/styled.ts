@@ -1,4 +1,27 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const render = keyframes`
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: .5;
+    transform: scale(1.2)
+  }
+  100%{
+    opacity: 1;
+  }
+`;
+
+const downText = keyframes`
+  from {
+    opacity: 0;
+    margin-top: -100%;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+`;
 
 export const HeaderStyled = styled.header`
   width: 100%;
@@ -10,7 +33,7 @@ export const HeaderStyled = styled.header`
 
   ::before {
     content: '';
-    background-image: url('../../../images/bg.svg');
+    /* background-image: url('../../../images/bg.svg'); */
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -18,12 +41,12 @@ export const HeaderStyled = styled.header`
     top: 5rem;
     width: 30rem;
     height: 100%;
-    animation: render 1s ease;
+    animation: ${render} 1s ease;
     z-index: 2;
     background-image: url('./images/bg.svg');
     @media (max-width: 720px) {
       left: 0;
-      opacity: .5;
+      /* opacity: .5; */
     }
   }
 `;
@@ -47,6 +70,7 @@ export const HeaderContent = styled.div`
     text-transform: uppercase;
     line-height: 1.5;
     letter-spacing: 1.5px;
+    animation: ${downText} .5s ease;
   }
 
   p {
@@ -55,6 +79,7 @@ export const HeaderContent = styled.div`
     padding-left: .5rem;
     margin: .7rem 0;
     color: gray;
+    animation: ${downText} 1s ease;
   }
 `;
 

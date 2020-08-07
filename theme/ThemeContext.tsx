@@ -25,17 +25,17 @@ const darkTheme: ContextProps = {
   },
 };
 
-interface fnCxt {
-  theme?: 'dark';
-  toggleTheme: () => any | null;
+type theme = {
+  toggleTheme: () => any;
+  theme?: string;
 }
 
-export const ContextTheme = React.createContext<fnCxt | null>(null);
+export const ContextTheme = React.createContext<Partial<theme>>({});
 function ThemeContext(props: any): JSX.Element {
   
   const [modeTheme, setModeTheme] = React.useState(true);
   
-  const valueContext: fnCxt = {
+  const valueContext: theme = {
     toggleTheme: () => setModeTheme(!modeTheme),
   };
 

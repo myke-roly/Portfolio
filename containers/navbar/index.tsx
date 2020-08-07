@@ -27,7 +27,7 @@ type Props = {
 }
 
 const Navbar: React.SFC<Props> = () => {
-  let { toggleTheme } = useContext(ContextTheme);
+  let theme = useContext(ContextTheme);
   return (
     <NavbarStyled className="navbar">
       <div className="container">
@@ -47,7 +47,7 @@ const Navbar: React.SFC<Props> = () => {
               <GithubSVG />
             </a>
           </ItemsStyles>
-          <button onClick={() => toggleTheme()}>Dark mode</button>
+          <button onClick={theme.toggleTheme}>Dark mode</button>
         </Links>
       </div>
     </NavbarStyled>
