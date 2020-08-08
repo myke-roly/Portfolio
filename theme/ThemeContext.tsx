@@ -26,26 +26,20 @@ const darkTheme: ContextProps = {
 };
 
 type theme = {
-  toggleTheme: () => any;
-  theme?: string;
+  themeMode?: string,
+  toggleTheme: () => void
 }
 
-export const ContextTheme = React.createContext<Partial<theme>>({});
-function ThemeContext(props: any): JSX.Element {
-  
-  const [modeTheme, setModeTheme] = React.useState(true);
-  
-  const valueContext: theme = {
-    toggleTheme: () => setModeTheme(!modeTheme),
-  };
+export const ContextTheme = React.createContext<theme | undefined>(undefined);
+export default function ThemeContext(props: any): JSX.Element {
+  const [themeMode, setThemeMode] = React.useState<string>('dark');
+  const toggleTheme = (): void => setThemeMode(state => state === 'dark' ? 'light' : 'dark')
 
   return (
-    <ContextTheme.Provider value={valueContext}>
-      <ThemeProvider theme={modeTheme ? lightTheme : darkTheme}>
+    <ContextTheme.Provider value={{ themeMode, toggleTheme }}>
+      <ThemeProvider theme={themeMode !== 'dark' ? darkTheme : lightTheme}>
         {props.children}
       </ThemeProvider>
     </ContextTheme.Provider>
   );
 }
-
-export default ThemeContext;

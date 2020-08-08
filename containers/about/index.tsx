@@ -2,7 +2,9 @@ import React from 'react';
 
 const AboutMe: React.SFC = () => {
   return (
-    <footer>AboutMe</footer>
+    <footer>
+      <button></button>
+    </footer>
   )
 }
 

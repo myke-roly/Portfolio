@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { NavbarStyled, Logo, Links, ItemsStyles } from './styled';
 import Link from 'next/link';
-import GithubSVG from './github.svg';
+import LightSVG from './icons/light.svg';
+import DarkSVG from './icons/dark.svg';
 import { ContextTheme } from 'theme/ThemeContext';
 
 interface itemsArray {
@@ -27,7 +28,8 @@ type Props = {
 }
 
 const Navbar: React.SFC<Props> = () => {
-  let theme = useContext(ContextTheme);
+  const { themeMode, toggleTheme } = useContext(ContextTheme);
+
   return (
     <NavbarStyled className="navbar">
       <div className="container">
@@ -38,16 +40,8 @@ const Navbar: React.SFC<Props> = () => {
         </Link>
         <Links className="items">
           { listItems() /* Mostrar items */ }
-          <ItemsStyles>
-            <a
-              href="https://www.github.com/myke-roly"
-              target="_blank"
-              rel="noreferrer noopener nofollow"
-            >
-              <GithubSVG />
-            </a>
-          </ItemsStyles>
-          <button onClick={theme.toggleTheme}>Dark mode</button>
+          <ItemsStyles />
+          <p onClick={toggleTheme}>{themeMode === 'dark' ? <LightSVG color="yellow" /> : <DarkSVG color="var(--primary)" />}</p>
         </Links>
       </div>
     </NavbarStyled>

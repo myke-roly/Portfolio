@@ -26,7 +26,8 @@ const downText = keyframes`
 export const HeaderStyled = styled.header`
   width: 100%;
   min-height: 95vh;
-  background: ${({ theme }) => theme.colors.dark};
+  /* background: ${({ theme }) => theme.colors.dark}; */
+  background: var(--secondary);
   position: relative;
   overflow: hidden;
   padding-bottom: 2rem;
@@ -66,7 +67,7 @@ export const HeaderContent = styled.div`
 
   h1 {
     font-size: 3.9em;
-    color: ${({ theme }) => theme.colors.primary};
+    color: var(--primary);;
     text-transform: uppercase;
     line-height: 1.5;
     letter-spacing: 1.5px;

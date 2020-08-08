@@ -43,14 +43,14 @@ export const ItemsStyles = styled.li`
   margin-left: 1rem;
   height: inherit;
   a {
-    color: ${({ theme }) => theme.colors.primary};
+    color: var(--primary);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.65rem;
-    padding: .5rem;
+    padding: .35rem;
     position: relative;
     :hover {
-      color: ${({ theme }) => theme.colors.primary};
+      color: var(--primary);
     }
     :hover::before {
       content: '';
@@ -61,13 +61,7 @@ export const ItemsStyles = styled.li`
       top: 0;
       left: 0;
       background: ${({ theme }) => theme.colors.gray};
-      animation: ${link} 500ms ease;
-    }
-
-    svg {
-      color: ${({ theme }) => theme.colors.primary};
-      width: 1.2em;
-      height: auto;
+      animation: ${link} .3s ease;
     }
   }
 `;

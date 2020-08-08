@@ -1,14 +1,18 @@
 import { AppProps } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
-import { useState } from 'react';
 import ThemeContext from '../theme/ThemeContext';
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --primary: ${({ theme }) => theme.colors.primary};
+    --secondary: ${({ theme }) => theme.colors.dark};
+  }
   *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Tahoma, sans-serif;
+    transition: background .5s ease-in-out;
   }
   body {
     font-size: 16px;
@@ -30,11 +34,10 @@ const GlobalStyle = createGlobalStyle`
 // }
 
 export default ({ Component, pageProps }: AppProps) => {
-  const [darkMode, setDarkMode] = useState(true);
   return (
     <ThemeContext>
       <GlobalStyle />
-      <Component {...pageProps} changeTheme={() => setDarkMode(!darkMode)} />
+      <Component {...pageProps} />
     </ThemeContext>
   );
 };
