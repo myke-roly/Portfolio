@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AboutStyled = styled.section`
-  min-height: 380px;
+  padding: 5rem 0;
   background: rgba(0,0,0,50%);
   > div {
     display: flex;
@@ -33,7 +33,7 @@ export const Image = styled.figure`
   img {
     box-shadow: 0 0 10px rgba(0,0,0,.7);
     position: absolute;
-    top: -30%;
+    top: -40%;
     right: 10%;
   }
 `;
