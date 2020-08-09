@@ -21,10 +21,10 @@ const ButtonStyles = styled.a`
   color: white;
   cursor: pointer;
   font-size: 1em;
-  font-weight: bold;;
+  font-weight: 600;
   display: inline-block;
   text-align: center;
-  padding: .7rem 1.2rem;
+  padding: .55rem 1.5rem;
   text-transform: uppercase;
   transition: all 500ms ease;
   margin-right: .5rem;

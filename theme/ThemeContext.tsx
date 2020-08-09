@@ -10,7 +10,7 @@ const lightTheme: ContextProps = {
     primary: '#ffffff',
     dark: '#1c2329',
     gray: '#eeeeee',
-    secondary: '#1e3044',
+    third: '#1e3044',
     lightBlue: '#087baa',
   },
 };
@@ -20,7 +20,7 @@ const darkTheme: ContextProps = {
     dark: '#fefefe',
     primary: '#1c2329',
     gray: '#333',
-    secondary: '#1e3044',
+    third: '#1e3044',
     lightBlue: '#087baa',
   },
 };

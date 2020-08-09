@@ -6,16 +6,21 @@ const GlobalStyle = createGlobalStyle`
   :root {
     --primary: ${({ theme }) => theme.colors.primary};
     --secondary: ${({ theme }) => theme.colors.dark};
+    --lightBlue: ${({ theme }) => theme.colors.lightBlue};
+    --gray: ${({ theme }) => theme.colors.gray};
+    --third: ${({ theme }) => theme.colors.third};
   }
   *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Tahoma, sans-serif;
-    transition: background .5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    transition: background .5s ease;
+    transform-origin: left;
   }
   body {
     font-size: 16px;
+    background: var(--secondary);
   }
   a {
     text-decoration: none;

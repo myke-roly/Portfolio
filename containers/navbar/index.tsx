@@ -24,9 +24,6 @@ const listItems = (): any => {
   ));
 };
 
-type Props = {
-}
-
 const Navbar: React.SFC<Props> = () => {
   const { themeMode, toggleTheme } = useContext(ContextTheme);
 

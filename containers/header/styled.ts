@@ -25,7 +25,7 @@ const downText = keyframes`
 
 export const HeaderStyled = styled.header`
   width: 100%;
-  min-height: 95vh;
+  min-height: 100vh;
   /* background: ${({ theme }) => theme.colors.dark}; */
   background: var(--secondary);
   position: relative;
@@ -34,20 +34,19 @@ export const HeaderStyled = styled.header`
 
   ::before {
     content: '';
-    /* background-image: url('../../../images/bg.svg'); */
+    background-image: url('./images/bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    right: 5rem;
+    left: 8rem;
     top: 5rem;
-    width: 30rem;
+    width: 40rem;
     height: 100%;
     animation: ${render} 1s ease;
     z-index: 2;
-    background-image: url('./images/bg.svg');
     @media (max-width: 720px) {
       left: 0;
-      /* opacity: .5; */
+      opacity: .5;
     }
   }
 `;
@@ -59,19 +58,27 @@ export const HeaderContent = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 10;
+  left: 60%;
+  top: 0;
 
   @media (max-width: 720px) {
     margin-top: 15rem;
     font-size: 12px;
+    left: 0%;
   }
 
   h1 {
-    font-size: 3.9em;
     color: var(--primary);;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 1.7px;
     text-transform: uppercase;
-    line-height: 1.5;
-    letter-spacing: 1.5px;
     animation: ${downText} .5s ease;
+
+    span {
+      color: var(--lightBlue);
+    }
   }
 
   p {
@@ -79,22 +86,24 @@ export const HeaderContent = styled.div`
     font-size: 1em;
     padding-left: .5rem;
     margin: .7rem 0;
-    color: gray;
+    color: var(--gray);
     animation: ${downText} 1s ease;
   }
 `;
 
 export const WaterStyled = styled.span`
-  position: absolute;
-  opacity: 0.2;
-  font-size: 8em;
-  font-weight: 900;
-  letter-spacing: 5px;
-  bottom: 0;
-  right: 5%;
+  position: fixed;
+  opacity: .05;
+  font-size: 9em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  top: 90%;
+  left: 10%;
+  color: var(--gray);
+  z-index: 10;
+  transform: rotate(-90deg);
 
   @media (max-width: 720px) {
-    width: 100%;
-    font-size: 4.5em;
+    font-size: 7em;
   }
 `;

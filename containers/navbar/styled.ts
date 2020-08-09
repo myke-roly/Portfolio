@@ -40,13 +40,13 @@ export const Links = styled.ul`
 `;
 
 export const ItemsStyles = styled.li`
-  margin-left: 1rem;
+  margin-left: 2rem;
   height: inherit;
   a {
     color: var(--primary);
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 0.65rem;
+    font-weight: 500;
+    font-size: 0.75rem;
     padding: .35rem;
     position: relative;
     :hover {
