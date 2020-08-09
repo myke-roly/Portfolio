@@ -15,7 +15,7 @@ export const NavbarStyled = styled.nav`
   top: 0;
   width: 100%;
   padding: .85rem 0;
-  background: ${({ theme }) => theme.colors.dark};
+  background: ${({ theme }) => theme.colors.secondary};
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
   z-index: 100;
 
@@ -27,7 +27,7 @@ export const NavbarStyled = styled.nav`
 `;
 
 export const Logo = styled.a`
-  color: var(--orange-color);
+  color: ${({ theme }) => theme.colors.lightBlue};
   img {
     width: 2rem;
   }
@@ -43,14 +43,14 @@ export const ItemsStyles = styled.li`
   margin-left: 2rem;
   height: inherit;
   a {
-    color: var(--primary);
+    color: ${({ theme }) => theme.colors.primary};
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.75rem;
     padding: .35rem;
     position: relative;
     :hover {
-      color: var(--primary);
+      color: ${({ theme }) => theme.colors.primary};
     }
     :hover::before {
       content: '';

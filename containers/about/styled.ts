@@ -17,12 +17,12 @@ export const Content = styled.div`
   padding: 3rem 4rem 0 3rem;
   width: 50%;
   h2 {
-    color: var(--primary);
+    color: ${({ theme }) => theme.colors.primary};
     margin-bottom: 2rem;
     font-size: 1.8em;
   }
   p {
-    color: var(--gray);
+    color: ${({ theme }) => theme.colors.gray};
     font-size: .95em;
     letter-spacing: 1.1px;
     font-weight: 400;

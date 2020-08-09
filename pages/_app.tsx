@@ -3,13 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 import ThemeContext from '../theme/ThemeContext';
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    --primary: ${({ theme }) => theme.colors.primary};
-    --secondary: ${({ theme }) => theme.colors.dark};
-    --lightBlue: ${({ theme }) => theme.colors.lightBlue};
-    --gray: ${({ theme }) => theme.colors.gray};
-    --third: ${({ theme }) => theme.colors.third};
-  }
   *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -20,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-size: 16px;
-    background: var(--secondary);
+    background: #1c2329;
   }
   a {
     text-decoration: none;

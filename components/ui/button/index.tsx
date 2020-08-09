@@ -9,9 +9,7 @@ import styled from 'styled-components';
 
  interface Props{
   hrefLink?: string;
-  type?: string;
-  color?: string;
-  text?: string
+  text?: string;
  }
 
 
@@ -31,7 +29,7 @@ const ButtonStyles = styled.a`
   background: ${props => props.theme.colors.lightBlue};
 `;
 
-const Button: React.SFC<Props> = ({ hrefLink, type, color, text }) => {
+const Button: React.SFC<Props> = ({ hrefLink, text }) => {
   return <ButtonStyles href={hrefLink} role="button" >{text}</ButtonStyles>;
 };
 

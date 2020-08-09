@@ -26,8 +26,7 @@ const downText = keyframes`
 export const HeaderStyled = styled.header`
   width: 100%;
   min-height: 100vh;
-  /* background: ${({ theme }) => theme.colors.dark}; */
-  background: var(--secondary);
+  background: ${({ theme }) => theme.colors.secondary};
   position: relative;
   overflow: hidden;
   padding-bottom: 2rem;
@@ -68,7 +67,7 @@ export const HeaderContent = styled.div`
   }
 
   h1 {
-    color: var(--primary);;
+    color: ${({ theme }) => theme.colors.primary};
     font-size: 4em;
     font-weight: bold;
     line-height: 1.4;
@@ -77,7 +76,7 @@ export const HeaderContent = styled.div`
     animation: ${downText} .5s ease;
 
     span {
-      color: var(--lightBlue);
+      color: ${({ theme }) => theme.colors.lightBlue};
     }
   }
 
@@ -86,7 +85,7 @@ export const HeaderContent = styled.div`
     font-size: 1em;
     padding-left: .5rem;
     margin: .7rem 0;
-    color: var(--gray);
+    color: ${({ theme }) => theme.colors.gray};
     animation: ${downText} 1s ease;
   }
 `;
@@ -99,7 +98,7 @@ export const WaterStyled = styled.span`
   letter-spacing: 3px;
   top: 90%;
   left: 10%;
-  color: var(--gray);
+  color: ${({ theme }) => theme.colors.gray};
   z-index: 10;
   transform: rotate(-90deg);
 

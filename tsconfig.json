@@ -25,11 +25,14 @@
     "target": "esnext",
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    ".next",
+    "next-config.js"
   ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "theme/index.js"
+    "**/*.tsx"
   ]
 }
