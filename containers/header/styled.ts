@@ -51,7 +51,7 @@ export const HeaderStyled = styled.header`
 `;
 
 export const HeaderContent = styled.div`
-  width: 100%;
+  width: 40%;
   height: 100%;
   margin-top: 8rem;
   overflow: hidden;
@@ -64,6 +64,7 @@ export const HeaderContent = styled.div`
     margin-top: 15rem;
     font-size: 12px;
     left: 0%;
+    width: 100%;
   }
 
   h1 {

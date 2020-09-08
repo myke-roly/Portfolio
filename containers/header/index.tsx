@@ -1,6 +1,8 @@
 import React from 'react';
 import { HeaderStyled, HeaderContent, WaterStyled } from './styled';
 
+import SocialMedia from "components/SocialMedia";
+
 const Header: React.SFC = () => {
   return (
     <HeaderStyled>
@@ -13,7 +15,7 @@ const Header: React.SFC = () => {
               Front<span>End</span> <br />
               Developer
             </h1>
-            <div>Redes sociales</div>
+            <SocialMedia />
           </div>
         </HeaderContent>
         <WaterStyled>DEVELOPER</WaterStyled>{/** Marca de agua*/}

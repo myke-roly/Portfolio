@@ -23,13 +23,13 @@ export const NavbarStyled = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-`;
-
-export const Logo = styled.a`
-  color: ${({ theme }) => theme.colors.lightBlue};
-  img {
-    width: 2rem;
+    
+    .logo {
+      svg {
+        height: 100%;
+        width: 35px;
+      }
+    }
   }
 `;
 
@@ -64,4 +64,10 @@ export const ItemsStyles = styled.li`
       animation: ${link} .3s ease;
     }
   }
+`;
+
+export const ButtonTheme = styled.button`
+  background: none;
+  border: none;
+  outline: none;
 `;
