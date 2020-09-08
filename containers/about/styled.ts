@@ -34,6 +34,7 @@ export const Image = styled.figure`
     box-shadow: 0 0 10px rgba(0,0,0,.7);
     position: absolute;
     top: -40%;
-    right: 10%;
+    right: 15%;
+    max-width: 250px;
   }
 `;
