@@ -8,7 +8,7 @@ export const SkillsStyled = styled.section`
   background-size: cover;
   position: relative;
   @media ${device.mobileL} {
-    padding: 2rem 0;
+    padding: 4rem 0;
     background-image: url('./images/null');
   }
 

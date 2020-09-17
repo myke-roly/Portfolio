@@ -1,14 +1,16 @@
 import React from 'react';
-import LinkedinIcon from 'assets/icons/LinkedinIcon';
 import { SocialMediaStyled } from "./styled";
+
+import { SiLinkedin, SiInstagram, SiGithub, SiTwitter } from 'react-icons/si';
+import LinkedinIcon from 'assets/icons/LinkedinIcon';
 
 const SocialMedia: React.SFC = () => {
   return (
     <SocialMediaStyled>
-      <LinkedinIcon />
-      <LinkedinIcon />
-      <LinkedinIcon />
-      <LinkedinIcon />
+      <SiLinkedin />
+      <SiInstagram />
+      <SiGithub />
+      <SiTwitter />
     </SocialMediaStyled>
   );
 };

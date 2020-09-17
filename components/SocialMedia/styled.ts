@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
 export const SocialMediaStyled = styled.div`
-  margin-left: 5rem;
   margin-top: 1rem;
+  display: grid;
+  padding: 0 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+
   svg {
-    width: 35px;
-    height: 35px;
-    margin-right: 1.7rem;
-    font-size: 60px;
+    font-size: 24px;
+    color: ${({ theme }) => theme.colors.primary};
+    
     :hover {
-      background: ${({ theme }) => theme.colors.lightBlue};
+      color: ${({ theme }) => theme.colors.lightBlue} !important;
       padding: .1rem;
       border-radius: 5px;
     }
