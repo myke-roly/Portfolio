@@ -1,7 +1,19 @@
-export default [
+export interface DataI {
+  id: number,
+  title: string,
+  description: string,
+  img: string,
+  live: string,
+  tools: string,
+  code: string
+}
+
+
+export const projects: Array<DataI> = [
   {
     id: 0,
     title: "Healthy App",
+    img: "",
     description: "Proyecto creado con un grupo de personas de FrontendCafe a modo aprendizaje, donde pude conectar con personas que tienen la misma pasion por la programacion y la colaboracion en equipo. Mi primera experiencia trabajando en equipo, donde encontre una mejor comunicacion con diferentes integrantes del proyecto, tanto con la parte de diseno, front y backen devs.",
     live: "https://healthy-front.vercel.app/",
     code: "https://github.com/Healthy-Dev",
@@ -10,6 +22,7 @@ export default [
   {
     id: 1,
     title: "Healthy App",
+    img: "",
     description: "Proyecto creado con un grupo de personas de FrontendCafe a modo aprendizaje, donde pude conectar con personas que tienen la misma pasion por la programacion y la colaboracion en equipo. Mi primera experiencia trabajando en equipo, donde encontre una mejor comunicacion con diferentes integrantes del proyecto, tanto con la parte de diseno, front y backen devs.",
     live: "https://healthy-front.vercel.app/",
     code: "https://github.com/Healthy-Dev",
@@ -18,6 +31,7 @@ export default [
   {
     id: 2,
     title: "Healthy App",
+    img: "",
     description: "Proyecto creado con un grupo de personas de FrontendCafe a modo aprendizaje, donde pude conectar con personas que tienen la misma pasion por la programacion y la colaboracion en equipo. Mi primera experiencia trabajando en equipo, donde encontre una mejor comunicacion con diferentes integrantes del proyecto, tanto con la parte de diseno, front y backen devs.",
     live: "https://healthy-front.vercel.app/",
     code: "https://github.com/Healthy-Dev",
@@ -26,6 +40,7 @@ export default [
   {
     id: 3,
     title: "Healthy App",
+    img: "",
     description: "Proyecto creado con un grupo de personas de FrontendCafe a modo aprendizaje, donde pude conectar con personas que tienen la misma pasion por la programacion y la colaboracion en equipo. Mi primera experiencia trabajando en equipo, donde encontre una mejor comunicacion con diferentes integrantes del proyecto, tanto con la parte de diseno, front y backen devs.",
     live: "https://healthy-front.vercel.app/",
     code: "https://github.com/Healthy-Dev",

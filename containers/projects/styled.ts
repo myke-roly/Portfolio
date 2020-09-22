@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from "helpers/device";
 
 export const ProjectsStyled = styled.section`
   background: ${({ theme }) => theme.colors.secondary};
@@ -19,6 +20,7 @@ export const ItemStyled = styled.li.attrs((props) => ({
   color: white;
   position: relative;
   margin: 0 1rem;
+  z-index: 15;
 
   &::before {
     content: '';
@@ -28,10 +30,6 @@ export const ItemStyled = styled.li.attrs((props) => ({
     width: 2px;
     height: 70%;
     background: #ffffff30;
-
-    &:nth-child(-1) {
-      width: 0;
-    }
   }
 
   &.active, &:hover {
@@ -39,4 +37,47 @@ export const ItemStyled = styled.li.attrs((props) => ({
     border-radius: 4px;
     cursor: pointer;
   }
+`;
+
+export const ListProjectsStyled = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  gap: 2rem;
+  place-items: center;
+  padding: 4rem 2rem;
+  @media ${device.tablet} {
+    display: block;
+  }
+`;
+
+export const ProjectStyled = styled.article`
+  width: 100%;
+  height: 300px;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+
+  &:hover section {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00546Be0;
+    transition: all 1s ease;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const Modal = styled.section`
+  position: absolute;
+  top: 100%;
+  padding: 2rem;
+  transition: all 1s ease;
 `;

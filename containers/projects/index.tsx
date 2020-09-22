@@ -1,24 +1,31 @@
 import React from 'react';
-import { ProjectsStyled, ItemsStyled, ItemStyled } from './styled';
+import { projects, DataI } from '__data';
+import { itemsTools } from '__data/tools';
+import {
+  ProjectsStyled,
+  ItemsStyled,
+  ItemStyled,
+  ListProjectsStyled,
+} from './styled';
 
-const Projects: React.FunctionComponent = () => {
+import Project from './project';
+
+const Projects: React.FC = () => {
+  function showTools(): any {
+    return itemsTools.map((tool, index) => (
+      <ItemStyled key={index}>{tool}</ItemStyled>
+    ));
+  }
+
   return (
     <ProjectsStyled>
-      <ItemsStyled>
-        <ItemStyled className="active">All Projects</ItemStyled>
-        <ItemStyled>React</ItemStyled>
-        <ItemStyled>Css</ItemStyled>
-        <ItemStyled>JavaScript</ItemStyled>
-        <ItemStyled>ReactNative</ItemStyled>
-        <ItemStyled>Node</ItemStyled>
-      </ItemsStyled>
-      <div>
-        <ul>
-          <li>Projects</li>
-          <li>Projects</li>
-          <li>Projects</li>
-          <li>Projects</li>
-        </ul>
+      <ItemsStyled>{showTools()}</ItemsStyled>
+      <div className="container">
+        <ListProjectsStyled>
+          {projects.map((project: DataI) => (
+            <Project key={project.id} project={project} />
+          ))}
+        </ListProjectsStyled>
       </div>
     </ProjectsStyled>
   );
