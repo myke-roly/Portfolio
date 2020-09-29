@@ -101,6 +101,7 @@ export const Modal = styled.section`
       margin: 0 1rem;
       svg {
         width: 18px;
+        height: 18px;
       }
 
       &:hover {
