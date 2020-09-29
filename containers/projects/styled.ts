@@ -56,6 +56,8 @@ export const ProjectStyled = styled.article`
   position: relative;
   z-index: 20;
   overflow: hidden;
+  box-shadow: 0 0 7px rgba(0, 0, 0, .5);
+  border-radius: 10px;
 
   &:hover section {
     display: block;
@@ -72,6 +74,7 @@ export const ProjectStyled = styled.article`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
   }
 `;
 
@@ -80,4 +83,45 @@ export const Modal = styled.section`
   top: 100%;
   padding: 2rem;
   transition: all 1s ease;
+
+  div {
+  display: flex;
+  align-items: center;
+    
+    h2 {
+      color: yellow;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding-bottom: -5px;
+      border-bottom: 3px solid yellow;
+    }
+
+    a {
+      color: white;
+      margin: 0 1rem;
+      svg {
+        width: 18px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .description {
+    color: ${({ theme }) => theme.colors.primary};
+    margin-top: 1rem;
+    font-size: 0.95em;
+  }
+
 `;
+
+export const Tool = styled.span`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: white;
+  z-index: 150;
+`; 

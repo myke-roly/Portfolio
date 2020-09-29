@@ -2,8 +2,22 @@ import styled from 'styled-components';
 
 export const AboutStyled = styled.section`
   padding: 5rem 0;
-  background: rgba(0,0,0,50%);
-  > div {
+  border-top: 3px solid rgba(151, 151, 151, 0.3);
+  background: ${({ theme }) => theme.colors.secondary};
+  position: relative;
+  box-shadow: -5px 0 7px rgba(151, 151, 151, 0.3);
+
+  &::before {
+    background: rgba(151, 151, 151, 0.1);
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  & > div {
     display: flex;
     justify-content: space-around;
     align-items: center;

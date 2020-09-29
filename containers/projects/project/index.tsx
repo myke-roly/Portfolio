@@ -1,6 +1,8 @@
 import React from 'react';
-import { ProjectStyled, Modal } from '../styled';
 import { DataI } from '__data';
+import { ProjectStyled, Modal, Tool } from '../styled';
+import GithubIcon from 'assets/icons/GithubIcon';
+import LinkIcon from 'assets/icons/LinkIcon';
 
 interface Props {
   project: DataI;
@@ -12,16 +14,18 @@ const Project: React.FC<Props> = ({
   return (
     <ProjectStyled>
       <img src="./images/bg-contact.jpg" alt="project" />
+      <Tool>{tools}</Tool>
       <Modal>
-        <h1>{title}</h1>
-        <span>{tools}</span>
-        <a href={code} target="_blank noreferrer noopener">
-          code
-        </a>
-        <a href={live} target="_blank noreferrer noopener">
-          live
-        </a>
-        <p>{description}</p>
+        <div>
+          <h2>{title}</h2>
+          <a href={code} target="_blank noreferrer noopener">
+            <GithubIcon />
+          </a>
+          <a href={live} target="_blank noreferrer noopener">
+            <LinkIcon />
+          </a>
+        </div>
+        <p className="description">{description}</p>
       </Modal>
     </ProjectStyled>
   );

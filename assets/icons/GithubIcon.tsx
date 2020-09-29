@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function GithubIcon(props: any) {
+export default function GithubIcon(props: any) {
   return (
     <svg
       width={24}
@@ -18,5 +18,3 @@ function GithubIcon(props: any) {
     </svg>
   );
 }
-
-export default GithubIcon;
