@@ -7,13 +7,11 @@ import styled from 'styled-components';
  * @param {color} button color "{primary, secondary, dark, orange, danger}"
  */
 
- interface Props{
-  hrefLink?: string;
+interface Props {
   text?: string;
- }
+}
 
-
-const ButtonStyles = styled.a`
+const ButtonStyles = styled.button`
   border: 2px solid transparent;
   border-radius: 5px;
   color: white;
@@ -22,15 +20,15 @@ const ButtonStyles = styled.a`
   font-weight: 600;
   display: inline-block;
   text-align: center;
-  padding: .55rem 1.5rem;
+  padding: 0.55rem 1.5rem;
   text-transform: uppercase;
   transition: all 500ms ease;
-  margin-right: .5rem;
-  background: ${props => props.theme.colors.lightBlue};
+  margin-right: 0.5rem;
+  background: ${(props) => props.theme.colors.lightBlue};
 `;
 
-const Button: React.SFC<Props> = ({ hrefLink, text }) => {
-  return <ButtonStyles href={hrefLink} role="button" >{text}</ButtonStyles>;
+const Button: React.FunctionComponent<Props> = ({ text }) => {
+  return <ButtonStyles>{text}</ButtonStyles>;
 };
 
 export default Button;

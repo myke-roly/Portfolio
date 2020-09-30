@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
   }
 
   return (
-    <ProjectsStyled>
+    <ProjectsStyled id="projects">
       <ItemsStyled>{showTools()}</ItemsStyled>
       <div className="container">
         <ListProjectsStyled>

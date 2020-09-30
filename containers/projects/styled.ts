@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { device } from "helpers/device";
 
 export const ProjectsStyled = styled.section`
+  padding-bottom: 7rem;
   background: ${({ theme }) => theme.colors.secondary};
 `;
 

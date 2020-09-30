@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
     transition: background .5s ease;
     transform-origin: left;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-size: 16px;
     background: #1c2329;

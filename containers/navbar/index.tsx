@@ -14,12 +14,12 @@ interface itemsArray {
   name: string;
 }
 
-const ListItems: React.SFC = (): any => {
+export const ListItems: React.FunctionComponent = (): any => {
   const items: itemsArray[] = [
     { id: 0, link: 'home', name: 'home' },
     { id: 1, link: 'about', name: 'about' },
     { id: 2, link: 'contact', name: 'contact' },
-    { id: 3, link: 'porfolio', name: 'porfolio' },
+    { id: 3, link: 'projects', name: 'projects' },
   ];
 
   return items.map((item) => (
@@ -29,7 +29,7 @@ const ListItems: React.SFC = (): any => {
   ));
 };
 
-const Navbar: React.SFC = () => {
+const Navbar: React.FunctionComponent = () => {
   const { themeMode, toggleTheme } = useContext(ContextTheme);
 
   return (

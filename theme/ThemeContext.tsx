@@ -12,6 +12,7 @@ const lightTheme: ContextProps = {
     gray: '#eeeeee',
     third: '#1e3044',
     lightBlue: '#087baa',
+    default: '#000000',
   },
 };
 
@@ -22,18 +23,20 @@ const darkTheme: ContextProps = {
     gray: '#333',
     third: '#1e3044',
     lightBlue: '#087baa',
+    default: '#ffffff',
   },
 };
 
 type themeI = {
-  themeMode?: string,
-  toggleTheme: () => void
-}
+  themeMode?: string;
+  toggleTheme: () => void;
+};
 
 export const ContextTheme = React.createContext({} as themeI);
 export default function ThemeContext(props: any): JSX.Element {
   const [themeMode, setThemeMode] = React.useState<themeI['themeMode']>('dark');
-  const toggleTheme: themeI['toggleTheme'] = (): void => setThemeMode(state => state === 'dark' ? 'light' : 'dark')
+  const toggleTheme: themeI['toggleTheme'] = (): void =>
+    setThemeMode((state) => (state === 'dark' ? 'light' : 'dark'));
 
   return (
     <ContextTheme.Provider value={{ themeMode, toggleTheme }}>
