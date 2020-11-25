@@ -28,6 +28,9 @@ const GlobalStyle = createGlobalStyle`
     width: 90%;
     margin: auto;
   }
+  button { 
+    cursor: pointer;
+  }
 `;
 
 // export function reportWebVitals(metric: any) {

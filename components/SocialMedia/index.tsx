@@ -4,7 +4,7 @@ import { SocialMediaStyled } from './styled';
 import { SiLinkedin, SiInstagram, SiGithub, SiTwitter } from 'react-icons/si';
 
 interface Props {
-  children: any;
+  children?: any;
 }
 
 function SocialMedia(props: Props) {

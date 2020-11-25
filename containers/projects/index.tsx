@@ -7,7 +7,11 @@ import Project from './project';
 
 const Projects: React.FC = () => {
   function showTools(): any {
-    return itemsTools.map((tool, index) => <ItemStyled key={index}>{tool}</ItemStyled>);
+    return itemsTools.map((tool, index) => (
+      <ItemStyled key={index} onClick={() => console.log(tool)}>
+        {tool}
+      </ItemStyled>
+    ));
   }
 
   return (

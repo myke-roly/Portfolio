@@ -1,23 +1,27 @@
 import styled from 'styled-components';
 
 export const FooterStyled = styled.footer`
-  background-color: #000;
-  padding: 1rem 0;
+  background-color: ${({ theme }) => theme.colors.secondary}ee;
+  padding: 2rem 0;
   color: white;
   text-align: center;
+  border-top: 1px solid ${({ theme }) => theme.colors.primary}44;
 
-  svg {
-    width: 30px;
-    height: 30px;
-  }
-`;
+  .container {
+    p {
+      font-size: 0.8em;
+      margin-top: 1rem;
+      color: ${({ theme }) => theme.colors.primary};
+    }
 
-export const Info = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  svg {
-    width: 20px !important;
+      svg {
+        width: 18px;
+      }
+    }
   }
 `;

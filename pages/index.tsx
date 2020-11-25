@@ -4,7 +4,7 @@ import Header from 'containers/header';
 import AboutMe from 'containers/about';
 import Skills from 'containers/skills';
 import Projects from 'containers/projects';
-import Contact from 'containers/contact';
+// import Contact from 'containers/contact';
 
 const Index: React.FunctionComponent = () => {
   return (
@@ -13,7 +13,7 @@ const Index: React.FunctionComponent = () => {
       <AboutMe />
       <Skills />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
     </Layout>
   );
 };

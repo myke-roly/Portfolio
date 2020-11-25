@@ -8,9 +8,7 @@ interface Props {
   project: DataI;
 }
 
-const Project: React.FC<Props> = ({
-  project: { title, tools, code, live, description },
-}) => {
+const Project: React.FC<Props> = ({ project: { title, tools, code, live, description } }) => {
   return (
     <ProjectStyled>
       <img src="./images/bg-contact.jpg" alt="project" />
@@ -18,10 +16,10 @@ const Project: React.FC<Props> = ({
       <Modal>
         <div>
           <h2>{title}</h2>
-          <a href={code} target="_blank noreferrer noopener">
+          <a href={code} target="_blank noreferrer noopener" title="code">
             <GithubIcon />
           </a>
-          <a href={live} target="_blank noreferrer noopener">
+          <a href={live} target="_blank noreferrer noopener" title="live">
             <LinkIcon />
           </a>
         </div>
