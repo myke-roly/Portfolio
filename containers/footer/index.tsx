@@ -1,6 +1,7 @@
 import React from 'react';
-import { FooterStyled } from './styled';
+import { FooterStyled, Info } from './styled';
 import LogoIcon from 'assets/icons/LogoIcon';
+import SocialMedia from 'components/SocialMedia';
 
 const Footer: React.SFC = () => {
   const year: Date = new Date();
@@ -9,7 +10,11 @@ const Footer: React.SFC = () => {
     <FooterStyled>
       <div className="container">
         <p> &copy; All rights reserved By MikeDev - {year.getFullYear()}</p>
-        <LogoIcon />
+        <Info>
+          <SocialMedia>
+            <LogoIcon />
+          </SocialMedia>
+        </Info>
       </div>
     </FooterStyled>
   );

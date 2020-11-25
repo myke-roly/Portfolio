@@ -1,18 +1,22 @@
 import React from 'react';
-import { SocialMediaStyled } from "./styled";
+import { SocialMediaStyled } from './styled';
 
 import { SiLinkedin, SiInstagram, SiGithub, SiTwitter } from 'react-icons/si';
-import LinkedinIcon from 'assets/icons/LinkedinIcon';
 
-const SocialMedia: React.SFC = () => {
+interface Props {
+  children: any;
+}
+
+function SocialMedia(props: Props) {
   return (
     <SocialMediaStyled>
       <SiLinkedin />
       <SiInstagram />
       <SiGithub />
       <SiTwitter />
+      {props.children}
     </SocialMediaStyled>
   );
-};
+}
 
 export default SocialMedia;

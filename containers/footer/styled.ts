@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FooterStyled = styled.footer`
   background-color: #000;
@@ -9,5 +9,15 @@ export const FooterStyled = styled.footer`
   svg {
     width: 30px;
     height: 30px;
+  }
+`;
+
+export const Info = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px !important;
   }
 `;
