@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { NavbarStyled, Links, ItemsStyles, ButtonTheme } from './styled';
 import Link from 'next/link';
 import { ContextTheme } from 'theme/ThemeContext';
+import { ProjectsContext } from 'state/projests/context';
 
 import DarkIcon from 'assets/icons/DarkIcon';
 import LigthIcon from 'assets/icons/LigthIcon';
@@ -31,22 +32,20 @@ export const ListItems: React.FunctionComponent = (): any => {
 
 const Navbar: React.FunctionComponent = () => {
   const { themeMode, toggleTheme } = useContext(ContextTheme);
+  const { getProjects } = useContext(ProjectsContext);
 
   return (
     <NavbarStyled>
       <div className="container">
         <Link href="/">
-          <a className="logo">
-            {themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}
-          </a>
+          <a className="logo">{themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}</a>
         </Link>
         <Links>
           <ListItems />
           <ItemsStyles />
-          <ButtonTheme onClick={toggleTheme}>
-            {themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}
-          </ButtonTheme>
+          <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
         </Links>
+        <button onClick={getProjects}>Get Data</button>
       </div>
     </NavbarStyled>
   );

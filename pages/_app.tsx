@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import ThemeContext from '../theme/ThemeContext';
+import ProjectsContext from 'state/projests/context';
 
 const GlobalStyle = createGlobalStyle`
   *, *::after, *::before {
@@ -40,8 +41,10 @@ const GlobalStyle = createGlobalStyle`
 export default ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeContext>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ProjectsContext>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ProjectsContext>
     </ThemeContext>
   );
 };
