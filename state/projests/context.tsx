@@ -2,32 +2,49 @@ import { createContext, useReducer } from 'react';
 import projectReducer from './reducer';
 import { Types } from './types';
 
+interface initialStateI {
+  projects: [];
+  isLoading: Boolean;
+  error: Boolean;
+}
+
 const initialState = {
-  projects: null,
+  projects: [],
   isLoading: false,
   error: false,
 };
+
+interface ProjectsI {
+  id: number;
+  title: string;
+  img: string;
+  description: string;
+  live: string; //"https://healthy-front.vercel.app/"
+  code: string; //"https://github.com/Healthy-Dev"
+  tools: string;
+}
+
+interface ContextI {
+  state: initialStateI;
+  getProjects: (projects: ProjectsI[]) => void;
+}
 
 export const ProjectsContext = createContext<any>(undefined);
 
 const ProjestsProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(projectReducer, initialState);
 
-  function getProjects() {
+  function getProjects(projects: ProjectsI[]): void {
     dispatch({ type: Types.getProjectsStart });
 
-    setTimeout(
-      () =>
-        dispatch({
-          type: Types.getProjectsSuccess,
-          payload: [{ title: 'Hei' }],
-        }),
-      3500
-    );
+    dispatch({
+      type: Types.getProjectsSuccess,
+      payload: projects,
+    });
   }
 
-  const providers: any = {
-    projects: state.projects,
+  const providers: ContextI = {
+    state,
     getProjects,
   };
 
