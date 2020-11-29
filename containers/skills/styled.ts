@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import { device } from 'helpers/device';
 
 export const SkillsStyled = styled.section`
-  padding: 7rem 0;
+  padding: 5rem 0;
   background-image: url('./images/bg-contact.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: fixed;
   position: relative;
+
   @media ${device.mobileL} {
     padding: 4rem 0;
     background-image: url('./images/null');
@@ -22,20 +24,21 @@ export const SkillsStyled = styled.section`
     width: 100%;
     z-index: 5;
   }
-  > .container {
+
+  .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 1.5rem;
   }
 `;
 
 export const CardStyled = styled.div`
   background: #ffffff25;
-  width: 280px;
+  width: 270px;
   box-shadow: 0 0 7px #00000077;
   border-radius: 5px;
-  margin: 1.7rem 1.2rem;
   z-index: 10;
   padding: 1.5rem;
   display: flex;
@@ -49,8 +52,9 @@ export const CardStyled = styled.div`
   p {
     font-size: 0.8em;
     color: #c4c4c4;
-    margin-left: 0.86rem;
+    margin-left: 0.5rem;
     letter-spacing: 0.1rem;
+
     @media ${device.mobileL} {
       display: none;
     }

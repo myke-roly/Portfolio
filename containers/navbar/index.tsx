@@ -17,10 +17,10 @@ interface itemsArray {
 
 export const ListItems: React.FunctionComponent = (): any => {
   const items: itemsArray[] = [
-    { id: 0, link: 'home', name: 'home' },
-    { id: 1, link: 'about', name: 'about' },
-    { id: 2, link: 'contact', name: 'contact' },
-    { id: 3, link: 'projects', name: 'projects' },
+    { id: 1, link: 'home', name: 'home' },
+    { id: 2, link: 'about', name: 'about' },
+    { id: 3, link: 'contact', name: 'contact' },
+    { id: 4, link: 'projects', name: 'projects' },
   ];
 
   return items.map((item) => (
@@ -45,7 +45,6 @@ const Navbar: React.FunctionComponent = () => {
           <ItemsStyles />
           <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
         </Links>
-        <button onClick={getProjects}>Get Data</button>
       </div>
     </NavbarStyled>
   );

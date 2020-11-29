@@ -10,13 +10,13 @@ export const AboutStyled = styled.section`
   &::before {
     background: rgba(151, 151, 151, 0.1);
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
   }
-  
+
   & > div {
     display: flex;
     justify-content: space-around;
@@ -28,27 +28,27 @@ export const AboutStyled = styled.section`
 export const Content = styled.div`
   margin-right: 3rem;
   margin-top: 3rem;
-  padding: 3rem 4rem 0 3rem;
-  width: 50%;
+  padding: 3rem 4rem 0 0;
   h2 {
     color: ${({ theme }) => theme.colors.primary};
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: 1.8em;
   }
   p {
     color: ${({ theme }) => theme.colors.gray};
-    font-size: .95em;
+    font-size: 0.95em;
     letter-spacing: 1.1px;
     font-weight: 400;
   }
 `;
 
-export const Image = styled.figure` 
+export const Image = styled.figure`
   img {
-    box-shadow: 0 0 10px rgba(0,0,0,.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     position: absolute;
     top: -40%;
     right: 15%;
-    max-width: 250px;
+    max-width: 220px;
+    z-index: 9;
   }
 `;

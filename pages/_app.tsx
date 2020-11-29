@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     transition: background .5s ease;
     transform-origin: left;
   }
@@ -26,8 +26,12 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
   .container {
-    width: 90%;
-    margin: auto;
+    width: 70%;
+    margin: 0 auto;
+
+    @media (max-width: 720px) {
+      width: 95%;
+    }
   }
   button { 
     cursor: pointer;

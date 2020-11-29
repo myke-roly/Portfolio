@@ -1,6 +1,6 @@
 import React from 'react';
 import { DataI } from '__data';
-import { ProjectStyled, Modal, Tool } from '../styled';
+import { ProjectStyled, InfoStyled, InfoTitleStyled, Tools } from './styled';
 import GithubIcon from 'assets/icons/GithubIcon';
 import LinkIcon from 'assets/icons/LinkIcon';
 
@@ -12,9 +12,8 @@ const Project: React.FC<Props> = ({ project: { title, tools, code, live, descrip
   return (
     <ProjectStyled>
       <img src="./images/bg-contact.jpg" alt="project" />
-      <Tool>{tools}</Tool>
-      <Modal>
-        <div>
+      <InfoStyled>
+        <InfoTitleStyled>
           <h2>{title}</h2>
           <a href={code} target="_blank noreferrer noopener" title="code">
             <GithubIcon />
@@ -22,9 +21,18 @@ const Project: React.FC<Props> = ({ project: { title, tools, code, live, descrip
           <a href={live} target="_blank noreferrer noopener" title="live">
             <LinkIcon />
           </a>
-        </div>
+        </InfoTitleStyled>
+        <Tools>
+          <span>Tools:</span>
+          {tools.map((tool, index) => (
+            <li key={index}>
+              {tool}
+              <span> / </span>
+            </li>
+          ))}
+        </Tools>
         <p className="description">{description}</p>
-      </Modal>
+      </InfoStyled>
     </ProjectStyled>
   );
 };

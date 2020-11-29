@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { projects, DataI } from '__data';
 import { itemsTools } from '__data/tools';
-import { ProjectsStyled, ItemsStyled, ItemStyled, ListProjectsStyled } from './styled';
+import { ProjectsStyled, ItemsStyled, ItemStyled, ListProjectsStyled, Wrapper } from './styled';
 import { ProjectsContext } from 'state/projests/context';
 
 import Project from './project';
@@ -27,13 +27,13 @@ const Projects: React.FC = () => {
         <div className="container">{showTools()}</div>
       </ItemsStyled>
       {state.isLoading && <p>Loading...</p>}
-      <div className="container">
-        <ListProjectsStyled>
+      <ListProjectsStyled>
+        <div className="container">
           {state.projects.map((project: DataI) => (
             <Project key={project.id} project={project} />
           ))}
-        </ListProjectsStyled>
-      </div>
+        </div>
+      </ListProjectsStyled>
     </ProjectsStyled>
   );
 };

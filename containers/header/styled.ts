@@ -43,9 +43,10 @@ export const HeaderStyled = styled.header`
     height: 100%;
     animation: ${render} 1s ease;
     z-index: 2;
+
     @media (max-width: 720px) {
       left: 0;
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 `;
@@ -74,7 +75,7 @@ export const HeaderContent = styled.div`
     line-height: 1.4;
     letter-spacing: 1.7px;
     text-transform: uppercase;
-    animation: ${downText} .5s ease;
+    animation: ${downText} 0.5s ease;
 
     span {
       color: ${({ theme }) => theme.colors.lightBlue};
@@ -84,8 +85,8 @@ export const HeaderContent = styled.div`
   p {
     border-left: 5px solid ${({ theme }) => theme.colors.lightBlue};
     font-size: 1em;
-    padding-left: .5rem;
-    margin: .7rem 0;
+    padding-left: 0.5rem;
+    margin: 0.7rem 0;
     color: ${({ theme }) => theme.colors.gray};
     animation: ${downText} 1s ease;
   }
@@ -93,7 +94,7 @@ export const HeaderContent = styled.div`
 
 export const WaterStyled = styled.span`
   position: fixed;
-  opacity: .05;
+  opacity: 0.05;
   font-size: 9em;
   font-weight: bold;
   letter-spacing: 3px;
