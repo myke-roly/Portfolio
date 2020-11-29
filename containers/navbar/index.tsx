@@ -32,7 +32,6 @@ export const ListItems: React.FunctionComponent = (): any => {
 
 const Navbar: React.FunctionComponent = () => {
   const { themeMode, toggleTheme } = useContext(ContextTheme);
-  const { getProjects } = useContext(ProjectsContext);
 
   return (
     <NavbarStyled>

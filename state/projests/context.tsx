@@ -26,6 +26,7 @@ interface ProjectsI {
 
 interface ContextI {
   state: initialStateI;
+  filterProjects: (query: string) => void;
   getProjects: (projects: ProjectsI[]) => void;
 }
 
@@ -43,9 +44,14 @@ const ProjestsProvider: React.FC = ({ children }) => {
     });
   }
 
+  function filterProjects(query: string): void {
+    console.log(`filter by ${query}`);
+  }
+
   const providers: ContextI = {
     state,
     getProjects,
+    filterProjects,
   };
 
   return <ProjectsContext.Provider value={providers}>{children}</ProjectsContext.Provider>;
