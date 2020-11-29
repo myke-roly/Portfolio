@@ -46,14 +46,25 @@ export const InfoTitleStyled = styled.section`
     width: 20px;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 `;
 
 export const Tools = styled.ul`
   color: white;
-  z-index: 150;
+  z-index: 99;
   display: flex;
-  gap: 0.3rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+
+  li {
+    display: block;
+    padding: 0.3rem 0.7rem;
+    color: ${({ theme }) => theme.colors.gray};
+    background: ${({ theme }) => theme.colors.default};
+    border-radius: 7px;
+    font-size: 0.7em;
+  }
 `;

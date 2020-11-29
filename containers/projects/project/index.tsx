@@ -25,10 +25,7 @@ const Project: React.FC<Props> = ({ project: { title, tools, code, live, descrip
         <Tools>
           <span>Tools:</span>
           {tools.map((tool, index) => (
-            <li key={index}>
-              {tool}
-              <span> / </span>
-            </li>
+            <li key={index}>{tool}</li>
           ))}
         </Tools>
         <p className="description">{description}</p>
