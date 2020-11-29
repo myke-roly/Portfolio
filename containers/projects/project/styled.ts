@@ -4,7 +4,7 @@ export const ProjectStyled = styled.section`
   width: 100%;
   margin: auto;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
@@ -14,9 +14,14 @@ export const ProjectStyled = styled.section`
   }
 
   img {
-    width: 300px;
+    width: 320px;
     object-fit: cover;
     border-radius: 7px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;
 

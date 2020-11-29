@@ -9,13 +9,12 @@ const link = keyframes`
     }
 `;
 
-
 export const NavbarStyled = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
-  padding: .85rem 0;
-  background: ${({ theme }) => theme.colors.secondary};
+  padding: 0.85rem 0;
+  background: ${({ theme }) => theme.colors.linearGradiant};
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
   z-index: 100;
 
@@ -23,7 +22,7 @@ export const NavbarStyled = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     .logo {
       svg {
         height: 100%;
@@ -47,7 +46,7 @@ export const ItemsStyles = styled.li`
     text-transform: uppercase;
     font-weight: 500;
     font-size: 0.75rem;
-    padding: .35rem;
+    padding: 0.35rem;
     position: relative;
     :hover {
       color: ${({ theme }) => theme.colors.primary};
@@ -61,7 +60,7 @@ export const ItemsStyles = styled.li`
       top: 0;
       left: 0;
       background: ${({ theme }) => theme.colors.gray};
-      animation: ${link} .3s ease;
+      animation: ${link} 0.3s ease;
     }
   }
 `;

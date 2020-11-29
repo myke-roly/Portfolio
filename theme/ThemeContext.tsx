@@ -25,7 +25,7 @@ const darkTheme: ContextProps = {
     third: '#1e3044',
     lightBlue: '#087baa',
     default: '#ffffff',
-    linearGradiant: 'linear-gradient(128.82deg, #fff 2.6%, rgba(4, 31, 33, 0.78) 41.93%, rgba(4, 31, 33, 0.64) 54.88%, rgba(255, 255, 255, 0.71) 94.7%)',
+    linearGradiant: 'linear-gradient(127.91deg, #90BFDF 1.4%, #FDFEFF 43.33%, #F5FAFE 51.45%, #FFFFFF 58.4%, #FFFFFF 61.89%, #E3F2FC 77.9%, #C4E3F8 100%)',
   },
 };
 

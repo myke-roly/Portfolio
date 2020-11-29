@@ -26,7 +26,7 @@ const downText = keyframes`
 export const HeaderStyled = styled.header`
   width: 100%;
   min-height: 100vh;
-  background: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.linearGradiant};
   position: relative;
   overflow: hidden;
   padding-bottom: 2rem;
