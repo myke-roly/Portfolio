@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { device } from 'helpers/device';
 
 const link = keyframes`
     0% {
@@ -32,15 +33,24 @@ export const NavbarStyled = styled.nav`
   }
 `;
 
-export const Links = styled.ul`
+export const LinksStyles = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
+export const LinksItemsStyles = styled.div`
+  display: flex;
+
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
 export const ItemsStyles = styled.li`
   margin-left: 2rem;
   height: inherit;
+
   a {
     color: ${({ theme }) => theme.colors.primary};
     text-transform: uppercase;
