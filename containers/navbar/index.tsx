@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { NavbarStyled, Links, ItemsStyles, ButtonTheme } from './styled';
 import Link from 'next/link';
 import { ContextTheme } from 'theme/ThemeContext';
-import { ProjectsContext } from 'state/projests/context';
 
 import DarkIcon from 'assets/icons/DarkIcon';
 import LigthIcon from 'assets/icons/LigthIcon';
