@@ -61,4 +61,5 @@ export const ItemStyled = styled.li.attrs((props) => ({
 
 export const ListProjectsStyled = styled.section`
   padding: 1rem 0;
+  overflow: hidden;
 `;

@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+function animate(porcent: number) {
+  return keyframes`
+  from {
+    transform: translateX(${porcent}%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+`;
+}
 
 export const ProjectStyled = styled.section`
   width: 100%;
@@ -9,8 +21,13 @@ export const ProjectStyled = styled.section`
   align-items: center;
   padding: 2rem 0;
 
+  &:nth-child(odd) {
+    animation: ${animate(-45)} 1s ease;
+  }
+
   &:nth-child(even) {
     flex-direction: row-reverse;
+    animation: ${animate(45)} 1s ease;
   }
 
   img {

@@ -59,12 +59,10 @@ const ProjestsProvider: React.FC = ({ children }) => {
       return {};
     });
 
-    setTimeout(() => {
-      dispatch({
-        type: Types.filterProjects,
-        payload: filter,
-      });
-    }, 500);
+    dispatch({
+      type: Types.filterProjects,
+      payload: filter,
+    });
   }
 
   const providers: ContextI = {
