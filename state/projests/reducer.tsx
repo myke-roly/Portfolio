@@ -28,6 +28,13 @@ const projectsReducer = (state: InitialStateI, action: ActionI) => {
         isLoading: false,
         error: true,
       };
+    case Types.filterProjects:
+      return {
+        ...state,
+        projects: action.payload || [],
+        isLoading: false,
+        error: false,
+      };
 
     default:
       return state;

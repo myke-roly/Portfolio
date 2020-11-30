@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataI } from '__data';
+import { DataI, projects } from '__data';
 import { ProjectStyled, InfoStyled, InfoTitleStyled, Tools } from './styled';
 import GithubIcon from 'assets/icons/GithubIcon';
 import LinkIcon from 'assets/icons/LinkIcon';
@@ -24,9 +24,7 @@ const Project: React.FC<Props> = ({ project: { title, tools, code, live, descrip
         </InfoTitleStyled>
         <Tools>
           <span>Tools:</span>
-          {tools.map((tool, index) => (
-            <li key={index}>{tool}</li>
-          ))}
+          {tools && tools.map((tool, index) => <li key={index}>{tool}</li>)}
         </Tools>
         <p className="description">{description}</p>
       </InfoStyled>

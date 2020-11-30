@@ -3,13 +3,15 @@ import projectReducer from './reducer';
 import { Types } from './types';
 
 interface initialStateI {
-  projects: [];
+  projects: [] | any;
+  filterProjects?: [];
   isLoading: Boolean;
   error: Boolean;
 }
 
 const initialState = {
   projects: [],
+  filterProjects: [],
   isLoading: false,
   error: false,
 };
@@ -21,12 +23,12 @@ interface ProjectsI {
   description: string;
   live: string; //"https://healthy-front.vercel.app/"
   code: string; //"https://github.com/Healthy-Dev"
-  tools: string;
+  tools: string[];
 }
 
 interface ContextI {
   state: initialStateI;
-  filterProjects: (query: string) => void;
+  getFilterProjects: (query: string, projects: ProjectsI[]) => void;
   getProjects: (projects: ProjectsI[]) => void;
 }
 
@@ -44,14 +46,31 @@ const ProjestsProvider: React.FC = ({ children }) => {
     });
   }
 
-  function filterProjects(query: string): void {
-    console.log(`filter by ${query}`);
+  function getFilterProjects(query: string, projects: ProjectsI[]): any {
+    dispatch({ type: Types.getProjectsStart });
+
+    const filter = projects.map((project: ProjectsI) => {
+      if (query === 'all projects') return project;
+      const tools = project?.tools?.map((tool: string) => tool);
+
+      if (tools.find((tool: string) => tool === query)) {
+        return project;
+      }
+      return {};
+    });
+
+    setTimeout(() => {
+      dispatch({
+        type: Types.filterProjects,
+        payload: filter,
+      });
+    }, 500);
   }
 
   const providers: ContextI = {
     state,
     getProjects,
-    filterProjects,
+    getFilterProjects,
   };
 
   return <ProjectsContext.Provider value={providers}>{children}</ProjectsContext.Provider>;

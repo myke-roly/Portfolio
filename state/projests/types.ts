@@ -2,6 +2,7 @@ export enum Types {
   getProjectsStart = 'GET_PROJECTS_START',
   getProjectsSuccess = 'GET_PROJECTS_SUCCESS',
   getProjectsFail = 'GET_PROJECTS_FAIL',
+  filterProjects = 'FILTER_PROJECTS',
 }
 
 type ProjectI = {

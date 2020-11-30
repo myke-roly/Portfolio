@@ -7,7 +7,7 @@ import { ProjectsContext } from 'state/projests/context';
 import Project from './project';
 
 const Projects: React.FC = () => {
-  const { getProjects, state } = useContext(ProjectsContext);
+  const { getProjects, getFilterProjects, state } = useContext(ProjectsContext);
 
   useEffect(() => {
     getProjects(projects);
@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
 
   function showTools(): any {
     return itemsTools.map((tool, index) => (
-      <ItemStyled key={index} onClick={() => console.log(tool)}>
+      <ItemStyled key={index} onClick={() => getFilterProjects(tool, projects)}>
         {tool}
       </ItemStyled>
     ));
@@ -26,12 +26,15 @@ const Projects: React.FC = () => {
       <ItemsStyled>
         <div className="container">{showTools()}</div>
       </ItemsStyled>
-      {state.isLoading && <p>Loading...</p>}
+      {state.isLoading && <p style={{ color: 'white' }}>Loading...</p>}
       <ListProjectsStyled>
         <div className="container">
-          {state.projects.map((project: DataI) => (
-            <Project key={project.id} project={project} />
-          ))}
+          {state.projects &&
+            state.projects.map((project: DataI) => {
+              if (Object.entries(project).length > 0) {
+                return <Project key={project.id} project={project} />;
+              }
+            })}
         </div>
       </ListProjectsStyled>
     </ProjectsStyled>
