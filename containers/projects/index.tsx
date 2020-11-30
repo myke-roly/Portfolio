@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { projects, DataI } from '__data';
 import { itemsTools } from '__data/tools';
-import { ProjectsStyled, ItemsStyled, ItemStyled, ListProjectsStyled, Wrapper } from './styled';
+import { ProjectsStyled, ItemsStyled, ItemStyled, ListProjectsStyled } from './styled';
 import { ProjectsContext } from 'state/projests/context';
 
 import Project from './project';

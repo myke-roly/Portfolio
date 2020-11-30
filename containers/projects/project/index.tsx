@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataI, projects } from '__data';
+import { DataI } from '__data';
 import { ProjectStyled, InfoStyled, InfoTitleStyled, Tools } from './styled';
 import GithubIcon from 'assets/icons/GithubIcon';
 import LinkIcon from 'assets/icons/LinkIcon';
