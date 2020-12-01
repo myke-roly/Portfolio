@@ -100,13 +100,19 @@ export const Tools = styled.ul`
   gap: 0.5rem;
   margin: 0.5rem 0;
 
-  li {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    padding: 0.3rem 0.7rem;
-    color: ${({ theme }) => theme.colors.gray};
-    background: ${({ theme }) => theme.colors.default};
-    border-radius: 7px;
-    font-size: 0.7em;
-    white-space: nowrap;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 12px !important;
+
+    li {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+      padding: 0.1rem 1rem;
+      color: ${({ theme }) => theme.colors.secondary};
+      background: ${({ theme }) => theme.colors.primary};
+      border-radius: 7px;
+      white-space: nowrap;
+    }
   }
 `;
