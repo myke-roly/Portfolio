@@ -30,6 +30,10 @@ export const SkillsStyled = styled.section`
     align-items: center;
     justify-content: space-between;
     gap: 1.8rem;
+
+    @media ${device.tablet} {
+      justify-content: center;
+    }
   }
 `;
 
