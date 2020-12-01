@@ -36,6 +36,10 @@ const Navbar: React.FC = () => {
   const { themeMode, toggleTheme } = useContext(ContextTheme);
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
+  function changeState(): void {
+    setIsOpenMenu((state) => !state);
+  }
+
   return (
     <NavbarStyled>
       <div className="container">
@@ -49,7 +53,7 @@ const Navbar: React.FC = () => {
           <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
           <BurguerMenu openMenu={() => setIsOpenMenu((state) => !state)} isOpenMenu={isOpenMenu} />
           {isOpenMenu && (
-            <MobileMenu>
+            <MobileMenu changeState={changeState}>
               <ul>
                 <ListItems />
               </ul>

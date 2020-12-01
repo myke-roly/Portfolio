@@ -8,7 +8,7 @@ interface PropsI {
 
 const BurguerMenu: React.FC<PropsI> = ({ openMenu, isOpenMenu }) => {
   return (
-    <BurguerMenuStyled onClick={openMenu} isOpenMenu={isOpenMenu}>
+    <BurguerMenuStyled onClick={openMenu} isOpenMenu={isOpenMenu} role="button">
       <span></span>
       <span></span>
       <span></span>

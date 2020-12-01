@@ -6,7 +6,7 @@ interface PropsStyled {
   theme?: any;
 }
 
-export const BurguerMenuStyled = styled.div`
+export const BurguerMenuStyled = styled.button`
   visibility: 0;
   display: none;
   width: 25px;
@@ -15,6 +15,10 @@ export const BurguerMenuStyled = styled.div`
   align-items: flex-start;
   position: relative;
   z-index: 999;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
 
   @media ${device.tablet} {
     visibility: visible;
@@ -29,6 +33,7 @@ export const BurguerMenuStyled = styled.div`
       transition: transform 0.3s ease;
 
       &:nth-child(even) {
+        width: 80%;
         background: ${(props: PropsStyled) => (!props.isOpenMenu ? props.theme.colors.primary : 'transparent')};
       }
 

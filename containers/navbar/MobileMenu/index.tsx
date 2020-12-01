@@ -1,8 +1,12 @@
 import React from 'react';
 import { MobileMenuStyles } from './styled';
 
-const MobileMenu: React.FC = ({ children }) => {
-  return <MobileMenuStyles>{children}</MobileMenuStyles>;
+interface PropsI {
+  changeState?(): void;
+}
+
+const MobileMenu: React.FC<PropsI> = ({ children, changeState }) => {
+  return <MobileMenuStyles onClick={changeState}>{children}</MobileMenuStyles>;
 };
 
 export default MobileMenu;
