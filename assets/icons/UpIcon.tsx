@@ -12,10 +12,10 @@ function UpIcon(props: any) {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="prefix__feather prefix__feather-chevron-up"
+      className="prefix__feather prefix__feather-chevrons-up"
       {...props}
     >
-      <path d="M18 15l-6-6-6 6" />
+      <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
     </svg>
   );
 }

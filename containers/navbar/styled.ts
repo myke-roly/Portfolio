@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { device } from 'helpers/device';
 
 const link = keyframes`
     0% {
@@ -13,34 +14,44 @@ export const NavbarStyled = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 0.85rem 0;
   background: ${({ theme }) => theme.colors.linearGradiant};
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.5);
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 3rem;
 
-  & > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @media ${device.tablet} {
+    padding: 0.85rem 5%;
+  }
 
-    .logo {
-      svg {
-        height: 100%;
-        width: 35px;
-      }
+  .logo {
+    svg {
+      height: 100%;
+      width: 35px;
     }
   }
 `;
 
-export const Links = styled.ul`
+export const LinksStyles = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
+export const LinksItemsStyles = styled.div`
+  display: flex;
+
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
 export const ItemsStyles = styled.li`
   margin-left: 2rem;
   height: inherit;
+
   a {
     color: ${({ theme }) => theme.colors.primary};
     text-transform: uppercase;
@@ -69,4 +80,5 @@ export const ButtonTheme = styled.button`
   background: none;
   border: none;
   outline: none;
+  margin-left: 1rem;
 `;

@@ -14,7 +14,7 @@ export const SocialMediaStyled = styled.div`
 
     &:hover {
       color: ${({ theme }) => theme.colors.lightBlue} !important;
-      padding: 0.1rem;
+      padding: 0.05rem;
       border-radius: 5px;
     }
   }

@@ -11,7 +11,7 @@ export const ProjectsStyled = styled.section`
 `;
 
 export const ItemsStyled = styled.ul`
-  background: #000;
+  background: ${({ theme }) => theme.colors.default};
   & > div {
     display: flex;
     justify-content: start;
@@ -35,11 +35,12 @@ export const ItemStyled = styled.li.attrs((props) => ({
   className: props.className,
 }))`
   padding: 0.5rem 1rem;
-  color: white;
+  color: ${({ theme }) => theme.colors.primary};
   position: relative;
   margin-right: 1rem;
   z-index: 15;
   white-space: nowrap;
+  text-transform: capitalize;
 
   &::before {
     content: '';
@@ -51,7 +52,7 @@ export const ItemStyled = styled.li.attrs((props) => ({
     background: #ffffff30;
   }
 
-  &.active,
+  &:nth-child(1),
   &:hover {
     background: ${({ theme }) => theme.colors.lightBlue};
     border-radius: 4px;
@@ -60,6 +61,6 @@ export const ItemStyled = styled.li.attrs((props) => ({
 `;
 
 export const ListProjectsStyled = styled.section`
-  padding: 1rem 0;
+  margin: 1rem 0;
   overflow: hidden;
 `;
