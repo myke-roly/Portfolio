@@ -7,7 +7,7 @@ const AboutMe: React.FC = () => {
       <div className="container">
         <Content>
           <h2>
-            Hi!! :grinning:
+            Hi!
             <br />
             Thanks for stopping by here.
           </h2>

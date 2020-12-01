@@ -17,7 +17,7 @@ export const MobileMenuStyles = styled.div`
   display: none;
 
   @media ${device.tablet} {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;

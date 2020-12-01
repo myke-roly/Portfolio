@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { device } from 'helpers/device';
 
 export const Wrapper = styled.div`
   width: 70%;

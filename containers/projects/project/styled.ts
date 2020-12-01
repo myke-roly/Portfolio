@@ -77,11 +77,12 @@ export const InfoTitleStyled = styled.section`
   }
 
   svg {
-    color: yellow;
+    color: ${({ theme }) => theme.colors.lightBlue};
     transition: transform 0.3s ease;
     width: 20px;
+
     @media ${device.tablet} {
-      color: #333;
+      /* color: #333; */
     }
 
     &:hover {
