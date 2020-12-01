@@ -34,7 +34,7 @@ export const ListItems: React.FC = (): any => {
 
 const Navbar: React.FC = () => {
   const { themeMode, toggleTheme } = useContext(ContextTheme);
-  const [isOpenMenu, setIsOpenMenu] = useState<Boolean>(false);
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
   return (
     <NavbarStyled>
@@ -46,11 +46,15 @@ const Navbar: React.FC = () => {
           <LinksItemsStyles>
             <ListItems />
           </LinksItemsStyles>
-          {/* <ItemsStyles>
-          </ItemsStyles> */}
           <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
-          <BurguerMenu openMenu={() => setIsOpenMenu((state) => !state)} />
-          {isOpenMenu && <MobileMenu />}
+          <BurguerMenu openMenu={() => setIsOpenMenu((state) => !state)} isOpenMenu={isOpenMenu} />
+          {isOpenMenu && (
+            <MobileMenu>
+              <ul>
+                <ListItems />
+              </ul>
+            </MobileMenu>
+          )}
         </LinksStyles>
       </div>
     </NavbarStyled>

@@ -79,4 +79,5 @@ export const ButtonTheme = styled.button`
   background: none;
   border: none;
   outline: none;
+  margin-left: 1rem;
 `;
