@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'helpers/device';
 
 export const Wrapper = styled.div`
   width: 70%;
@@ -61,6 +62,6 @@ export const ItemStyled = styled.li.attrs((props) => ({
 `;
 
 export const ListProjectsStyled = styled.section`
-  padding: 1rem 0;
+  margin: 1rem 0;
   overflow: hidden;
 `;

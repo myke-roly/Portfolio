@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { device } from 'helpers/device';
 
 function animate(porcent: number) {
   return keyframes`
@@ -14,12 +15,25 @@ function animate(porcent: number) {
 
 export const ProjectStyled = styled.section`
   width: 100%;
-  margin: auto;
+  margin: 1rem auto;
   display: flex;
   gap: 2rem;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    margin: 1.5rem auto;
+
+    &:nth-child(even) {
+      flex-direction: column !important;
+    }
+
+    img {
+      width: 100% !important;
+    }
+  }
 
   &:nth-child(odd) {
     animation: ${animate(-45)} 1s ease;
@@ -66,6 +80,9 @@ export const InfoTitleStyled = styled.section`
     color: yellow;
     transition: transform 0.3s ease;
     width: 20px;
+    @media ${device.tablet} {
+      color: #333;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -74,19 +91,21 @@ export const InfoTitleStyled = styled.section`
 `;
 
 export const Tools = styled.ul`
-  color: white;
+  color: ${({ theme }) => theme.colors.gray};
   z-index: 99;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
   margin: 0.5rem 0;
 
   li {
-    display: block;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     padding: 0.3rem 0.7rem;
     color: ${({ theme }) => theme.colors.gray};
     background: ${({ theme }) => theme.colors.default};
     border-radius: 7px;
     font-size: 0.7em;
+    white-space: nowrap;
   }
 `;
