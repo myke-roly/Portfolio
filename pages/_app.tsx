@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
 
     @media (max-width: 720px) {
-      width: 95%;
+      width: 90%;
     }
   }
   button { 

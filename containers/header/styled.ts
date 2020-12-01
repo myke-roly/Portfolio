@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { device } from 'helpers/device';
 
 const render = keyframes`
   0%{
@@ -29,7 +30,9 @@ export const HeaderStyled = styled.header`
   background: ${({ theme }) => theme.colors.linearGradiant};
   position: relative;
   overflow: hidden;
-  padding-bottom: 2rem;
+  padding-bottom: 10rem;
+  display: grid;
+  place-items: end;
 
   ::before {
     content: '';
@@ -37,14 +40,15 @@ export const HeaderStyled = styled.header`
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    left: 8rem;
+    left: 10rem;
     top: 5rem;
-    width: 40rem;
+    width: 50%;
     height: 100%;
     animation: ${render} 1s ease;
     z-index: 2;
 
-    @media (max-width: 720px) {
+    @media ${device.tablet} {
+      width: 100%;
       left: 0;
       opacity: 0.5;
     }
@@ -52,20 +56,24 @@ export const HeaderStyled = styled.header`
 `;
 
 export const HeaderContent = styled.div`
-  width: 40%;
+  /* width: 40%; */
   height: 100%;
-  margin-top: 8rem;
   overflow: hidden;
   position: relative;
-  z-index: 10;
+  z-index: 99;
   left: 60%;
-  top: 0;
 
-  @media (max-width: 720px) {
-    margin-top: 15rem;
+  @media ${device.tablet} {
     font-size: 12px;
     left: 0%;
     width: 100%;
+
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.5em !important;
+    }
   }
 
   h1 {
@@ -84,7 +92,7 @@ export const HeaderContent = styled.div`
 
   p {
     border-left: 5px solid ${({ theme }) => theme.colors.lightBlue};
-    font-size: 1em;
+    font-size: 1.1em;
     padding-left: 0.5rem;
     margin: 0.7rem 0;
     color: ${({ theme }) => theme.colors.gray};
@@ -101,10 +109,9 @@ export const WaterStyled = styled.span`
   top: 90%;
   left: 10%;
   color: ${({ theme }) => theme.colors.gray};
-  z-index: 10;
   transform: rotate(-90deg);
 
-  @media (max-width: 720px) {
+  @media ${device.tablet} {
     font-size: 7em;
   }
 `;

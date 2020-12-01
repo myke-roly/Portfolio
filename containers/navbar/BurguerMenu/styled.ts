@@ -27,8 +27,8 @@ export const BurguerMenuStyled = styled.button`
     span {
       border-radius: 50px;
       width: 100%;
-      height: 3.5px;
-      margin-bottom: 0.2rem;
+      height: 2px;
+      margin-bottom: 0.4rem;
       background: ${({ theme }) => theme.colors.primary};
       transition: transform 0.3s ease;
 
@@ -38,11 +38,11 @@ export const BurguerMenuStyled = styled.button`
       }
 
       &:nth-child(1) {
-        transform: ${(props: PropsStyled) => (props.isOpenMenu ? 'translateY(-50%) rotate(45deg)' : '0')};
+        transform: ${(props: PropsStyled) => (props.isOpenMenu ? 'translateY(-10%) rotate(45deg)' : '0')};
       }
 
       &:nth-child(3) {
-        transform: ${(props: PropsStyled) => (props.isOpenMenu ? 'translateY(50%) rotate(-45deg)' : '0')};
+        transform: ${(props: PropsStyled) => (props.isOpenMenu ? 'translateY(10%) rotate(-45deg)' : '0')};
       }
     }
   }

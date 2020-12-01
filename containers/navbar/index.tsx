@@ -42,25 +42,23 @@ const Navbar: React.FC = () => {
 
   return (
     <NavbarStyled>
-      <div className="container">
-        <Link href="/">
-          <a className="logo">{themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}</a>
-        </Link>
-        <LinksStyles>
-          <LinksItemsStyles>
-            <ListItems />
-          </LinksItemsStyles>
-          <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
-          <BurguerMenu openMenu={() => setIsOpenMenu((state) => !state)} isOpenMenu={isOpenMenu} />
-          {isOpenMenu && (
-            <MobileMenu changeState={changeState}>
-              <ul>
-                <ListItems />
-              </ul>
-            </MobileMenu>
-          )}
-        </LinksStyles>
-      </div>
+      <Link href="/">
+        <a className="logo">{themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}</a>
+      </Link>
+      <LinksStyles>
+        <LinksItemsStyles>
+          <ListItems />
+        </LinksItemsStyles>
+        <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
+        <BurguerMenu openMenu={() => setIsOpenMenu((state) => !state)} isOpenMenu={isOpenMenu} />
+        {isOpenMenu && (
+          <MobileMenu changeState={changeState}>
+            <ul>
+              <ListItems />
+            </ul>
+          </MobileMenu>
+        )}
+      </LinksStyles>
     </NavbarStyled>
   );
 };

@@ -37,7 +37,9 @@ export const MobileMenuStyles = styled.div`
       padding: 3rem 0;
 
       li {
-        font-size: 2em;
+        a {
+          font-size: 1.5em;
+        }
       }
     }
   }
