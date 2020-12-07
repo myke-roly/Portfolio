@@ -24,7 +24,7 @@ const Project: React.FC<Props> = ({ project: { title, tools, code, live, descrip
         </InfoTitleStyled>
         <Tools>
           <span>Tools:</span>
-          {tools && tools.map((tool, index) => <li key={index}>{tool}</li>)}
+          <ul>{tools && tools.map((tool, index) => <li key={index}>{tool}</li>)}</ul>
         </Tools>
         <p className="description">{description}</p>
       </InfoStyled>

@@ -4,20 +4,19 @@ import { device } from 'helpers/device';
 export const SkillsStyled = styled.section`
   padding: 5rem 0;
   background-image: url('./images/bg-contact.jpg');
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: fixed;
   position: relative;
 
   @media ${device.mobileL} {
-    padding: 4rem 0;
-    background-image: url('./images/null');
+    padding: 4.5rem 0;
   }
 
   ::before {
     content: '';
     position: absolute;
-    background: #000000cc;
+    background: #000000aa;
     height: 100%;
     top: 0;
     left: 0;
@@ -30,18 +29,23 @@ export const SkillsStyled = styled.section`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1.8rem;
+
+    @media ${device.tablet} {
+      justify-content: center;
+    }
   }
 `;
 
 export const CardStyled = styled.div`
-  background: #ffffff25;
+  background: ${({ theme }) => theme.colors.linearGradiant};
   width: 270px;
-  box-shadow: 0 0 7px #00000077;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   z-index: 10;
   padding: 1.5rem;
   display: flex;
+  gap: 0.5rem;
   align-items: center;
   position: relative;
 
@@ -51,7 +55,7 @@ export const CardStyled = styled.div`
 
   p {
     font-size: 0.8em;
-    color: #c4c4c4;
+    color: ${({ theme }) => theme.colors.gray};
     margin-left: 0.5rem;
     letter-spacing: 0.1rem;
 

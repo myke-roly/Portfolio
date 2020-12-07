@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { NavbarStyled, Links, ItemsStyles, ButtonTheme } from './styled';
+import React, { useContext, useState } from 'react';
+import { NavbarStyled, LinksStyles, ItemsStyles, LinksItemsStyles, ButtonTheme } from './styled';
 import Link from 'next/link';
 import { ContextTheme } from 'theme/ThemeContext';
 
@@ -8,13 +8,16 @@ import LigthIcon from 'assets/icons/LigthIcon';
 import LogoIcon from 'assets/icons/LogoIcon';
 import LightLogoIcon from 'assets/icons/LightLogoIcon';
 
+import BurguerMenu from './BurguerMenu';
+import MobileMenu from './MobileMenu';
+
 interface itemsArray {
   id: number;
   link: string;
   name: string;
 }
 
-export const ListItems: React.FunctionComponent = (): any => {
+export const ListItems: React.FC = (): any => {
   const items: itemsArray[] = [
     { id: 1, link: 'home', name: 'home' },
     { id: 2, link: 'about', name: 'about' },
@@ -29,21 +32,33 @@ export const ListItems: React.FunctionComponent = (): any => {
   ));
 };
 
-const Navbar: React.FunctionComponent = () => {
+const Navbar: React.FC = () => {
   const { themeMode, toggleTheme } = useContext(ContextTheme);
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+
+  function changeState(): void {
+    setIsOpenMenu((state) => !state);
+  }
 
   return (
     <NavbarStyled>
-      <div className="container">
-        <Link href="/">
-          <a className="logo">{themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}</a>
-        </Link>
-        <Links>
+      <Link href="/">
+        <a className="logo">{themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}</a>
+      </Link>
+      <LinksStyles>
+        <LinksItemsStyles>
           <ListItems />
-          <ItemsStyles />
-          <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
-        </Links>
-      </div>
+        </LinksItemsStyles>
+        <ButtonTheme onClick={toggleTheme}>{themeMode === 'dark' ? <LigthIcon /> : <DarkIcon />}</ButtonTheme>
+        <BurguerMenu openMenu={() => setIsOpenMenu((state) => !state)} isOpenMenu={isOpenMenu} />
+        {isOpenMenu && (
+          <MobileMenu changeState={changeState}>
+            <ul>
+              <ListItems />
+            </ul>
+          </MobileMenu>
+        )}
+      </LinksStyles>
     </NavbarStyled>
   );
 };
