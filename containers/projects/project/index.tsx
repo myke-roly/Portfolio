@@ -11,7 +11,9 @@ interface Props {
 const Project: React.FC<Props> = ({ project: { title, tools, code, live, img, description } }) => {
   return (
     <ProjectStyled>
-      <img src={`./projects/${img}.png`} alt={title} />
+      <a href={live} target="_blank noreferrer noopener" title="live">
+        <img src={`./projects/${img}.png`} alt={title} />
+      </a>
       <InfoStyled>
         <InfoTitleStyled>
           <h2>{title}</h2>

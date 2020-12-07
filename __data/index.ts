@@ -8,6 +8,8 @@ export interface DataI {
   code: string;
 }
 
+// TODO: traducir texto
+
 export const projects: Array<DataI> = [
   {
     id: 1,
@@ -72,7 +74,7 @@ export const projects: Array<DataI> = [
     img: 'expences',
     description:
       'Me hacia falta un "Exel" mas detallado y facil uso para administrar mis gastos personales y de cualquiera que lo use. Con la ayuda de firebase se creo una base de datos simple, donde se puede almacenar los gatos de cada usuario, y poder tener acceso a su informacion y ver todas las estadisticas personales, solo es necesarion authenticarse para poder usar la app.',
-    live: 'https://expences.vercel.app/',
+    live: 'https://expenttrent-app.vercel.app/',
     code: 'https://github.com/myke-roly/expenttrent-app',
     tools: ['typescript', 'scss', 'firebase', 'chart-js'],
   },
