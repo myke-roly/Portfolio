@@ -12,7 +12,7 @@ export const projects: Array<DataI> = [
   {
     id: 1,
     title: 'Healthy App',
-    img: '',
+    img: 'healthy-desktop',
     description:
       'Proyecto creado con un grupo de personas de FrontendCafe a modo aprendizaje, donde pude conectar con personas que tienen la misma pasion por la programacion y la colaboracion en equipo. Mi primera experiencia trabajando en equipo, donde encontre una mejor comunicacion con diferentes integrantes del proyecto, tanto con la parte de diseno, front y backen devs.',
     live: 'https://healthy.vercel.app/',
@@ -22,7 +22,7 @@ export const projects: Array<DataI> = [
   {
     id: 2,
     title: 'Portfolio',
-    img: '',
+    img: 'portfolio',
     description:
       'Desarrolle mi portfolio personal usando Next.js integrando Typescript como lenguaje, y para los estilos decidi usar styled-components, que me parece una herramienta muy poderosa a la hora de desarollar aplicaciones en React.',
     live: 'https://myke-dev.vercel.app/',
@@ -32,7 +32,7 @@ export const projects: Array<DataI> = [
   {
     id: 3,
     title: 'Movie App',
-    img: '',
+    img: 'movies-app',
     description:
       'Con personas de Front-End Cafe, decidimos a modo de aprendizaje crear una aplicacion e integrar todos nuestros conocimientos de react y su ecosistema. A partir de ello tambien hicimos coworking juntandonos en algun lugar de Buenos Aires, fue una experiencia bastante contructiva compartiendo ideas y ayudandonos unos a otros.',
     live: 'https://movies-mike.herokuapp.com/',
@@ -42,7 +42,7 @@ export const projects: Array<DataI> = [
   {
     id: 4,
     title: 'Full Stack E-commerce',
-    img: '',
+    img: 'e-commerce',
     description: `Con la necesidad de un familiar por tener un e-commerce, decidi aplicar todo mi conociemiento para crear una web que tenga todo lo necesario para que se le haga el trabajo mas sencillo, realizando diferentes tareas: 
     1. Listar catalogo de productos 
     2. Filtrar productos por categorias
@@ -59,7 +59,7 @@ export const projects: Array<DataI> = [
   {
     id: 5,
     title: 'Admin E-commerce',
-    img: '',
+    img: 'admin',
     description:
       'Para complementar a this web, Se creo un administrador donde tienes control detallado sobre la web, se puede ver estadisticas de comprar o listar de productos, agregar, eliminar, editar ver stock y mucho mas. Esto para hacer el trabajo mas facil para el cliente',
     live: 'https://admin-caps.vercel.app/',
@@ -69,7 +69,7 @@ export const projects: Array<DataI> = [
   {
     id: 6,
     title: 'Administrador de Gastos',
-    img: '',
+    img: 'expences',
     description:
       'Me hacia falta un "Exel" mas detallado y facil uso para administrar mis gastos personales y de cualquiera que lo use. Con la ayuda de firebase se creo una base de datos simple, donde se puede almacenar los gatos de cada usuario, y poder tener acceso a su informacion y ver todas las estadisticas personales, solo es necesarion authenticarse para poder usar la app.',
     live: 'https://expences.vercel.app/',
@@ -79,8 +79,9 @@ export const projects: Array<DataI> = [
   {
     id: 7,
     title: 'Todo Vue',
-    img: '',
-    description: 'Primera proyecto en vue, a modo de aprendizaje hice un simple todo integrando los conceptos basicos de vue.',
+    img: 'todo-vue',
+    description:
+      'Primera proyecto en vue, a modo de aprendizaje hice un simple todo integrando los conceptos basicos de vue.',
     live: 'https://todo-vue-rose.vercel.app/#/',
     code: 'https://github.com/myke-roly/todo-vue',
     tools: ['vue', 'tailwind'],

@@ -8,10 +8,10 @@ interface Props {
   project: DataI;
 }
 
-const Project: React.FC<Props> = ({ project: { title, tools, code, live, description } }) => {
+const Project: React.FC<Props> = ({ project: { title, tools, code, live, img, description } }) => {
   return (
     <ProjectStyled>
-      <img src="./images/bg-contact.jpg" alt="project" />
+      <img src={`./projects/${img}.png`} alt={title} />
       <InfoStyled>
         <InfoTitleStyled>
           <h2>{title}</h2>
