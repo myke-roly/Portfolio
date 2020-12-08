@@ -12,13 +12,19 @@ const AboutMe: React.FC = () => {
             Thanks for stopping by here.
           </h2>
           <p>
-            My name is Mike, Im learning web developent to can to work in this word of IT, I find my pasion in my life, I love coding, resolved problems , metting people on
-            different part of the world.
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia perferendis doloremque corporis. Cum, veniam a quasi eum quis totam impedit adipisci nisi vel facilis
-            quisquam culpa quaerat similique consequatur exercitationem. Velit nulla fugiat accusamus vero quaerat perferendis consectetur, qui voluptates quasi illum quo
-            temporibus perspiciatis molestias excepturi atque culpa, odit esse dolorum, quia tempore. Fuga optio asperiores tenetur doloremque quisquam.
+            Hi!! My name is Mike, I've been styudy the last two years where I got to know differents technologies and
+            tools, what web applications are build with, from basic to deploy. In all this time I have know part of the
+            web devepment ecosystem.
+          </p>
+          <p>How all developer I start with Html, Css, and Js. I scaled with differents frameworks and libraries.</p>
+          <p>
+            I learning the two parts of web development but Im focused on the Front-End with Js and React, also basic
+            knowledge with NodeJs and Php at Back-End and the managment of the information that we do in the database
+            with MySQL and MondoDB.
+          </p>
+          <p>
+            I know that I still have many things to learn, that's why I am always willing to do it, learn new
+            technologies and meet people with whom to share and exchange knowledge.
           </p>
         </Content>
         <Image>
