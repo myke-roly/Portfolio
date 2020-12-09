@@ -19,7 +19,7 @@ interface itemsArray {
 
 export const ListItems: React.FC = (): any => {
   const items: itemsArray[] = [
-    { id: 1, link: 'home', name: 'home' },
+    { id: 1, link: '', name: 'home' },
     { id: 2, link: 'about', name: 'about' },
     { id: 3, link: 'contact', name: 'contact' },
     { id: 4, link: 'projects', name: 'projects' },

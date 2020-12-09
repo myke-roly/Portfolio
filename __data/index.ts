@@ -8,8 +8,6 @@ export interface DataI {
   code: string;
 }
 
-// TODO: traducir texto
-
 export const projects: Array<DataI> = [
   {
     id: 1,
