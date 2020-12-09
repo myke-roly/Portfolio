@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
 
   function showTools(): ReactElement[] {
     return itemsTools.map((tool: string, index: number) => (
-      <ItemStyled active={tool === query} key={index} onClick={() => handleClick(tool, projects)}>
+      <ItemStyled key={index} onClick={() => handleClick(tool, projects)} active={tool === query}>
         {tool}
       </ItemStyled>
     ));

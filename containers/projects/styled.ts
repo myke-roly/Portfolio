@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+interface Props {
+  active: boolean;
+  theme?: any;
+}
+
 export const ProjectsStyled = styled.section`
   padding-bottom: 7rem;
   background: ${({ theme }) => theme.colors.linearGradiant};
@@ -60,8 +65,3 @@ export const ListProjectsStyled = styled.section`
   margin: 1rem 0;
   overflow: hidden;
 `;
-
-interface Props {
-  active?: boolean;
-  theme?: any;
-}
