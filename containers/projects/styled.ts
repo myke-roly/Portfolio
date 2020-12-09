@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  width: 70%;
-  margin: 0 auto;
-`;
-
 export const ProjectsStyled = styled.section`
   padding-bottom: 7rem;
   background: ${({ theme }) => theme.colors.linearGradiant};

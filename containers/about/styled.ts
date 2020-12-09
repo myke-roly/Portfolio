@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from 'helpers/device';
 
 export const AboutStyled = styled.section`
-  padding: 4rem 0;
+  padding: 5rem 0;
   border-top: 3px solid rgba(151, 151, 151, 0.3);
   background: ${({ theme }) => theme.colors.default};
   position: relative;
