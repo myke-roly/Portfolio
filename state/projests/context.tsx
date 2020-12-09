@@ -21,8 +21,8 @@ interface ProjectsI {
   title: string;
   img: string;
   description: string;
-  live: string; //"https://healthy-front.vercel.app/"
-  code: string; //"https://github.com/Healthy-Dev"
+  live: string;
+  code: string;
   tools: string[];
 }
 

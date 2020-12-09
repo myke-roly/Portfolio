@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { ReactElement, useContext, useEffect, useState } from 'react';
 import { projects, DataI } from '__data';
 import { itemsTools } from '__data/tools';
 import { ProjectsStyled, ItemsStyled, ItemStyled, ListProjectsStyled } from './styled';
@@ -8,14 +8,20 @@ import Project from './project';
 
 const Projects: React.FC = () => {
   const { getProjects, getFilterProjects, state } = useContext(ProjectsContext);
+  const [query, setQuery] = useState<string>('all-projects');
 
   useEffect(() => {
     getProjects(projects);
   }, []);
 
-  function showTools(): any {
-    return itemsTools.map((tool, index) => (
-      <ItemStyled key={index} onClick={() => getFilterProjects(tool, projects)}>
+  function handleClick(tool: string, projects: any[]) {
+    setQuery(tool);
+    getFilterProjects(tool, projects);
+  }
+
+  function showTools(): ReactElement[] {
+    return itemsTools.map((tool: string, index: number) => (
+      <ItemStyled active={tool === query} key={index} onClick={() => handleClick(tool, projects)}>
         {tool}
       </ItemStyled>
     ));
@@ -29,12 +35,11 @@ const Projects: React.FC = () => {
       {state.isLoading && <p style={{ color: 'white' }}>Loading...</p>}
       <ListProjectsStyled>
         <div className="container">
-          {state.projects &&
-            state.projects.map((project: DataI) => {
-              if (Object.entries(project).length > 0) {
-                return <Project key={project.id} project={project} />;
-              }
-            })}
+          {state?.projects?.map((project: DataI) => {
+            if (Object.entries(project).length > 0) {
+              return <Project key={project.id} project={project} />;
+            }
+          })}
         </div>
       </ListProjectsStyled>
     </ProjectsStyled>

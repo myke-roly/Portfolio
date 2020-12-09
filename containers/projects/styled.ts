@@ -27,28 +27,28 @@ export const ItemsStyled = styled.ul`
   }
 `;
 
-export const ItemStyled = styled.li.attrs((props) => ({
-  className: props.className,
-}))`
-  padding: 0.5rem 1rem;
+export const ItemStyled = styled.li`
+  border-radius: 4px;
+  background: ${(props: Props) => (props.active ? props.theme.colors.lightBlue : '')};
   color: ${({ theme }) => theme.colors.primary};
-  position: relative;
+  padding: 0.5rem 1rem;
   margin-right: 1rem;
-  z-index: 15;
-  white-space: nowrap;
   text-transform: capitalize;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  z-index: 15;
 
   &::before {
     content: '';
     position: absolute;
-    top: 15%;
+    top: 33%;
     right: -5%;
     width: 2px;
-    height: 70%;
-    background: #ffffff30;
+    height: 33%;
+    background: #ffffff20;
   }
 
-  &:nth-child(1),
   &:hover {
     background: ${({ theme }) => theme.colors.lightBlue};
     border-radius: 4px;
@@ -60,3 +60,8 @@ export const ListProjectsStyled = styled.section`
   margin: 1rem 0;
   overflow: hidden;
 `;
+
+interface Props {
+  active?: boolean;
+  theme?: any;
+}
