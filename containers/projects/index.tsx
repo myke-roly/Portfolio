@@ -1,5 +1,5 @@
 import React, { ReactElement, useContext, useEffect, useState } from 'react';
-import { projects, DataI } from '__data';
+import { projects, ProjectsI } from '__data';
 import { itemsTools } from '__data/tools';
 import { ProjectsStyled, ItemsStyled, ItemStyled, ListProjectsStyled } from './styled';
 import { ProjectsContext } from 'state/projests/context';
@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
     getProjects(projects);
   }, []);
 
-  function handleClick(tool: string, projects: any[]) {
+  function handleClick(tool: string, projects: ProjectsI[]) {
     setQuery(tool);
     getFilterProjects(tool, projects);
   }
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
       {state.isLoading && <p style={{ color: 'white' }}>Loading...</p>}
       <ListProjectsStyled>
         <div className="container">
-          {state?.projects?.map((project: DataI) => {
+          {state?.projects?.map((project: ProjectsI) => {
             if (Object.entries(project).length > 0) {
               return <Project key={project.id} project={project} />;
             }

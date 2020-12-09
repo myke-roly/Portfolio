@@ -1,4 +1,4 @@
-export interface DataI {
+export interface ProjectsI {
   id: number;
   title: string;
   description: string;
@@ -8,7 +8,7 @@ export interface DataI {
   code: string;
 }
 
-export const projects: Array<DataI> = [
+export const projects: Array<ProjectsI> = [
   {
     id: 1,
     title: 'Healthy App',
