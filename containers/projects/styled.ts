@@ -7,7 +7,8 @@ export const ProjectsStyled = styled.section`
 
 export const ItemsStyled = styled.ul`
   background: ${({ theme }) => theme.colors.default};
-  & > div {
+
+  .container {
     display: flex;
     justify-content: start;
     align-items: center;

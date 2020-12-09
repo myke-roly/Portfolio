@@ -21,6 +21,7 @@ export const ProjectStyled = styled.section`
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
+  position: relative;
 
   @media ${device.tablet} {
     flex-direction: column;
