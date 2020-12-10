@@ -34,7 +34,7 @@ export const projects: Array<ProjectsI> = [
     img: 'movies-app',
     description:
       'With the folks at "FRONTEND CAFE", we decided on creating a web application to integrate all our knowledge of ReactJS and its ecosystem. We also did coworking meeting in a cafe in Buenos Aires, it was a very constructive experience to share ideas and help each other.',
-    live: 'https://movies-mike.herokuapp.com/',
+    live: 'https://movie-mem.vercel.app/',
     code: 'https://github.com/myke-roly/movie-group-react',
     tools: ['react', 'styled-components', 'scss'],
   },
