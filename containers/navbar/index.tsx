@@ -42,8 +42,8 @@ const Navbar: React.FC = () => {
 
   return (
     <NavbarStyled>
-      <Link href="/">
-        <a className="logo">{themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}</a>
+      <Link href="/" legacyBehavior className="logo">
+        {themeMode === 'dark' ? <LogoIcon /> : <LightLogoIcon />}
       </Link>
       <LinksStyles>
         <LinksItemsStyles>
